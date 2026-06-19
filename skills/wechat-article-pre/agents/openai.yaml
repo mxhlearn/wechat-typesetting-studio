@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Pre"
+  short_description: "Prepare Chinese WeChat articles as precise WeMD-ready Markdown."
+  default_prompt: "Use $wechat-article-pre to draft, rewrite, package, or review Chinese WeChat public-account content for WeMD-ready Markdown. Preserve required tutorial steps, links, commands, screenshots, and verification; learn reusable style from feedback or benchmark accounts without copying wording; keep claims restrained and prose concise; write outputs to an article-title folder in the session directory; use 2.35:1 cover briefs or cover QA only when visuals matter."

@@ -1,8 +1,8 @@
-# Doocs Visual Rhythm
+# WeMD Visual Rhythm
 
-Use this file when the article is targeting `Doocs-Friendly Markdown` and should look closer to a finished WeChat post after paste or import.
+Use this file when the article is targeting WeMD and should feel like a finished WeChat post after Markdown preview and copy.
 
-The goal is not decorative styling. The goal is to make the draft feel clean, breathable, and publication-ready inside a Markdown-first editor.
+The goal is not decorative styling. The goal is clean, breathable, publication-ready Markdown that survives WeMD themes and WeChat copy flow.
 
 ## Visual Priorities
 
@@ -11,20 +11,20 @@ Optimize for these outcomes in order:
 1. the reader can understand the structure at a glance
 2. the first screen feels light and readable
 3. long sections break naturally before fatigue appears
-4. screenshots, code blocks, and notes do not interrupt the reading rhythm
-5. the article still looks like a serious article, not a template demo
+4. screenshots, code blocks, diagrams, and notes do not interrupt the reading rhythm
+5. the article still feels like content first, not a theme demo
 
 ## Opening Screen Rules
 
-The first visible screen after paste into Doocs should usually contain:
+The first visible screen in WeMD preview should usually contain:
 
 - one clear title
 - one short summary line or lead quote
 - one opening paragraph or one opening paragraph plus one short transition line
 
-Avoid making the top of the article feel crowded.
+Avoid making the top of the article crowded.
 
-Do not stack too many of these together before the reader starts moving:
+Do not stack too many of these before the reader starts moving:
 
 - long summary
 - cover copy block
@@ -55,7 +55,7 @@ For tutorial articles:
 
 ## Paragraph Texture
 
-When targeting Doocs, paragraphs should usually feel lighter than a normal blog draft.
+When targeting WeMD, paragraphs should usually feel lighter than a normal blog draft.
 
 Use these defaults:
 
@@ -88,12 +88,19 @@ Avoid headings that are:
 - too abstract to predict the section
 - near-duplicates of the title
 
-For tutorial content, prefer headings like:
+## WeMD Feature Discipline
 
-- `## Install Node.js First`
-- `## Configure npm Paths`
-- `## Install Codex CLI in CC Switch`
-- `## Verify Everything Works`
+WeMD supports modern Markdown-centered preview features, but the article should not depend on every advanced feature.
+
+Use advanced features only when they serve the article:
+
+- Tables: comparison data only.
+- Code highlighting: tutorials and technical notes.
+- Mermaid: diagrams only when simpler prose or bullets are worse.
+- Math: only when the article genuinely needs formulas.
+- Theme/CSS assumptions: keep content readable without custom styling.
+
+If a feature may not survive the final WeChat copy flow, put the fallback in the article or a sidecar note.
 
 ## List Rhythm
 
@@ -130,21 +137,9 @@ Before a screenshot marker:
 
 - make sure the surrounding text already explains why the screenshot matters
 
-Good image marker placement:
-
-- after a step explanation
-- before a likely confusion point
-- after a visible settings change
-
-Weak image marker placement:
-
-- between two tightly connected sentences
-- before the article has established context
-- attached to every minor step
-
 ## Emphasis Discipline
 
-Doocs can make over-emphasis look noisy quickly.
+WeMD themes can make over-emphasis look noisy quickly.
 
 Use emphasis sparingly:
 
@@ -170,13 +165,14 @@ Do not end with:
 - a sales pitch that feels unrelated to the article
 - a sudden emotional register change
 
-## Doocs Visual QA
+## WeMD Visual QA
 
-Before calling the article visually ready for Doocs, check:
+Before calling the article visually ready for WeMD, check:
 
 - would the first screen feel clean on mobile
 - do section breaks appear before fatigue
 - are there any heavy text walls that need splitting
 - do code blocks have enough framing
 - are screenshot markers placed only where they help
+- can the Markdown still read well without custom theme assumptions
 - does the article still feel like content first, style second

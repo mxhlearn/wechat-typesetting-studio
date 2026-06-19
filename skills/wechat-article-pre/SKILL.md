@@ -1,11 +1,11 @@
 ---
-name: wechat-doocs-article-pre
-description: Use when drafting, rewriting, polishing, packaging, or reviewing Chinese WeChat official account content for Doocs-ready Markdown. Covers rough drafts, notes, outlines, tutorials, commentary, reviews, list posts, explainers, case reviews, news/update digests, interviews/profiles, title/opening work, benchmark public-account language/layout learning, content feedback learning, cover briefs, cover prompt shaping, cover-generation QA, visual notes, and final publication-readiness audits. Prioritize precise Chinese writing, article-shape routing, low-AI voice, concise structure, factual restraint, Doocs handoff cleanliness, and light visual packaging; avoid publishing automation, browser upload flows, HTML-first export, fake screenshots, or multi-session orchestration.
+name: wechat-article-pre
+description: Use when drafting, rewriting, polishing, packaging, or reviewing Chinese WeChat official account content into editor-ready Markdown, with WeMD as the default handoff target. Covers rough drafts, notes, outlines, tutorials, commentary, reviews, list posts, explainers, case reviews, news/update digests, interviews/profiles, title/opening work, benchmark public-account language/layout learning, content feedback learning, cover briefs, cover prompt shaping, cover-generation QA, visual notes, and final publication-readiness audits. Prioritize precise Chinese writing, article-shape routing, low-AI voice, concise structure, factual restraint, WeMD handoff cleanliness, GitHub-flavored Markdown compatibility, and light visual packaging; avoid publishing automation, browser upload flows, HTML-first export, fake screenshots, or multi-session orchestration.
 ---
 
-# WeChat Doocs Article Pre
+# WeChat Article Pre
 
-Use this skill to turn raw WeChat public-account content into clean, publishable Markdown for Doocs.
+Use this skill to turn raw WeChat public-account content into clean, publishable Markdown. Default to WeMD as the current editor target.
 
 ## Defaults
 
@@ -14,7 +14,7 @@ Default to:
 - Chinese-first output
 - one-session delivery
 - substance before packaging
-- Doocs-friendly Markdown
+- WeMD-friendly Markdown
 - low-AI voice
 - light visuals only when useful
 - no publishing automation
@@ -58,7 +58,7 @@ Choose the narrowest shape that fits the request:
 - Case review or reflection: facts, decision, result, lesson.
 - News or update digest: fact, context, impact, caveat.
 - Interview or profile: scene, person, judgment, takeaway.
-- Audit or polish: title, opening, structure, voice, Doocs readiness.
+- Audit or polish: title, opening, structure, voice, WeMD readiness.
 
 ## Workflow
 
@@ -69,7 +69,7 @@ Choose the narrowest shape that fits the request:
 5. Draft or rewrite from the strongest point.
 6. Cut generic lines and repeated ideas.
 7. Check factual restraint and unsupported claims.
-8. Tighten Markdown for Doocs.
+8. Tighten Markdown for WeMD.
 9. Add title options, cover brief, or image notes only when useful.
 10. Run final audit.
 
@@ -79,15 +79,21 @@ For voice, anti-AI cleanup, and rewrite discipline, read [references/originality
 
 For layout, paragraph length, and tutorial rhythm, read [references/layout-and-style.md](references/layout-and-style.md).
 
-For Doocs handoff rules, read [references/doocs-handoff-contract.md](references/doocs-handoff-contract.md).
+For WeMD handoff rules, Markdown compatibility, copy-to-WeChat constraints, image notes, and output folder rules, read [references/wemd-handoff-contract.md](references/wemd-handoff-contract.md).
 
-For Doocs visual rhythm, first-screen density, mobile scanability, or public-account reading experience, read [references/doocs-visual-rhythm.md](references/doocs-visual-rhythm.md).
+For WeMD-specific features such as GFM tables, Mermaid, math, image hosting, custom themes, CSS, or copy behavior, read [references/wemd-capability-matrix.md](references/wemd-capability-matrix.md).
+
+For WeMD visual rhythm, first-screen density, mobile scanability, theme-aware Markdown, or public-account reading experience, read [references/wemd-visual-rhythm.md](references/wemd-visual-rhythm.md).
 
 For user feedback, repeated quality issues, or self-improving revision behavior, read [references/content-learning-loop.md](references/content-learning-loop.md).
 
 For sample public-account articles, benchmark account language, layout style learning, or "write like this but for my topic" requests, read [references/wechat-style-learning.md](references/wechat-style-learning.md).
 
-For cover planning, cover prompt shaping, image slots, or direct cover-generation QA, read [references/visual-packaging.md](references/visual-packaging.md).
+For deciding whether visuals are needed and where they belong in the article, read [references/visual-packaging.md](references/visual-packaging.md).
+
+For cover planning, cover dimensions, visual style controls, cover copy, and generation-ready brief structure, read [references/cover-brief.md](references/cover-brief.md).
+
+For cover inspection, crop safety, clutter control, text accuracy, and retry decisions, read [references/cover-qa.md](references/cover-qa.md).
 
 For actual raster cover generation prompt recipes, read [references/cover-prompt-recipes.md](references/cover-prompt-recipes.md) after the visual brief is stable.
 
@@ -112,7 +118,7 @@ The final article file must:
 - contain one `#` title
 - use `##` for main sections
 - use `###` only when needed
-- avoid raw HTML
+- avoid raw HTML unless the user explicitly asks for WeMD/CSS customization
 - avoid TODOs, prompt residue, and editor notes
 - keep image notes short and standalone
 - use `## References` only when links must stay
@@ -134,6 +140,7 @@ If the user asks for an actual raster cover, stabilize the `visual-brief.md` fir
 
 When the article is a tutorial, setup guide, workflow guide, or tool walkthrough:
 
+- preserve required steps, links, commands, screenshots, and verification
 - prefer direct headings
 - keep action, reason, and verification together
 - label shell environments clearly
@@ -168,5 +175,7 @@ Before delivery, verify:
 - shape matches content
 - tutorial steps are executable
 - user feedback has been applied without overfitting
-- Markdown pastes into Doocs cleanly
+- Markdown is ready for WeMD preview/copy flow
 - internal commentary is gone
+
+When the user asks only for a review, return findings first, grouped by severity or publishing impact. Do not rewrite the full article unless asked.

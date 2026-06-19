@@ -21,6 +21,8 @@ Every paragraph must add one of these:
 
 If it adds none, cut it.
 
+Use a stricter rule for public-account drafts: if a sentence only increases politeness, atmosphere, or completeness, cut it unless it changes reader action or judgment.
+
 ## Anti-AI Tone Rules
 
 Avoid these pattern types unless the user explicitly wants them:
@@ -65,6 +67,14 @@ Allow:
 - short standalone sentences when they sharpen a point
 - occasional bluntness when the topic is operational
 - simple phrasing over elegant emptiness
+
+Prefer exact verbs:
+
+- `配置` over `进行配置`
+- `打开` over `进入到相关页面`
+- `验证` over `检查是否成功完成`
+- `删掉` over `进行删除处理`
+- `保留` over `予以保留`
 
 ## Originality Rules
 
@@ -135,6 +145,27 @@ Use these moves to de-template the draft:
 - replace "in summary" with the final action or judgment
 - replace "obviously / inevitably / completely" with the actual condition or evidence
 
+## Precision Pass
+
+Run this pass before final delivery:
+
+1. Circle every broad noun: 能力, 体验, 效率, 价值, 生态, 方案.
+2. Replace it with the actual action, risk, result, or decision.
+3. Cut every sentence that only announces structure.
+4. Replace inflated claims with conditional claims.
+5. Keep one strong judgment per section when the article is commentary or review.
+6. Keep one verification point per critical step when the article is a tutorial.
+
+Common replacements:
+
+| Weak | Better |
+| --- | --- |
+| 提升使用体验 | 少切一次窗口 / 少改一次配置 / 更容易验证结果 |
+| 降低门槛 | 第一次配置也能按步骤跑通 |
+| 值得关注 | 会影响安装路径 / 写作节奏 / 发布前检查 |
+| 赋能创作 | 帮你把草稿改成可发布文章 |
+| 完整解决方案 | 这篇只解决安装、配置、验证三件事 |
+
 ## Sentence-Level Cut List
 
 Cut or rewrite sentences that begin like:
@@ -158,3 +189,4 @@ Before delivery, ask:
 - would a human editor cut this sentence as empty
 - is any paragraph memorable for the right reason, or only well-formed
 - if I remove the title, does the opening still prove the article knows what it is doing
+- would this sentence survive a strict human editor

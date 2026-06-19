@@ -1,4 +1,0 @@
-interface:
-  display_name: "WeChat Doocs Article Pre"
-  short_description: "Turn WeChat content into concise Doocs-ready Markdown."
-  default_prompt: "Use $wechat-doocs-article-pre to draft, rewrite, package, or audit Chinese WeChat content for Doocs-ready Markdown; learn reusable style from feedback or benchmark public-account examples without copying wording, save style-profile.md when style reuse matters, keep claims restrained, write outputs to an article-title folder in the session directory, and use 2.35:1 structured cover sidecars only when useful."

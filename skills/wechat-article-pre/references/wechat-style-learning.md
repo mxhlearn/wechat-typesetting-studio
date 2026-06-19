@@ -2,7 +2,7 @@
 
 Use this file when the user provides or asks for example WeChat public-account articles, benchmark accounts, screenshots, Markdown samples, or style references and wants a new original article for their own topic.
 
-The goal is not imitation. The goal is to extract transferable writing and layout discipline, then produce original Doocs-ready Markdown.
+The goal is not imitation. The goal is to extract transferable writing and layout discipline, then produce original WeMD-ready Markdown.
 
 ## Contents
 
@@ -12,9 +12,10 @@ The goal is not imitation. The goal is to extract transferable writing and layou
 - [Style Profile](#style-profile)
 - [Language Extraction](#language-extraction)
 - [Layout Extraction](#layout-extraction)
+- [Pattern Matrix](#pattern-matrix)
 - [Drafting Workflow](#drafting-workflow)
 - [Borrow / Avoid List](#borrow--avoid-list)
-- [Doocs Combination](#doocs-combination)
+- [WeMD Combination](#wemd-combination)
 - [Reuse Across Articles](#reuse-across-articles)
 - [Similarity QA](#similarity-qa)
 - [Output](#output)
@@ -67,7 +68,7 @@ Learn from:
 - list and quote usage
 - image placement
 - closing and CTA restraint
-- Doocs-compatible Markdown shape
+- WeMD-compatible Markdown shape
 
 Do not copy:
 
@@ -146,6 +147,15 @@ Weak constraints:
 - `Use the same tone as the sample.`
 - `Be more like this account.`
 
+Prefer measurable constraints when possible:
+
+- paragraph length range
+- frequency of examples
+- whether headings are nouns, actions, or judgments
+- how often the author states a viewpoint
+- how much background appears before the first usable point
+- how warnings and caveats are placed
+
 ## Layout Extraction
 
 Extract layout style separately from language:
@@ -162,7 +172,7 @@ Extract layout style separately from language:
 - code block framing
 - closing shape
 
-Then translate it to Doocs-safe Markdown:
+Then translate it to WeMD-safe Markdown:
 
 - one `#` title
 - `##` for main sections
@@ -170,11 +180,38 @@ Then translate it to Doocs-safe Markdown:
 - short paragraphs
 - fenced code blocks with language tags
 - short standalone image notes
-- no raw HTML
+- no raw HTML unless the user explicitly asks for WeMD/CSS customization
 - no decorative separators
 - no prompt residue
 
 If a benchmark account relies on heavy HTML styling, custom cards, color blocks, or complex image-text layout, approximate the reading rhythm in Markdown instead of recreating the decoration.
+
+## Pattern Matrix
+
+Build this matrix when the user provides multiple examples or asks for style learning across later articles:
+
+| Layer | Extract | Convert to constraint |
+| --- | --- | --- |
+| Title | promise, subject, tension, length | 3 to 5 title patterns that fit the new topic |
+| Opening | task, pain, contrast, scene, judgment | one opening move and one thing to avoid |
+| Paragraph | average length, sentence rhythm | target paragraph density and cut threshold |
+| Section | heading style, section count, section job | section order that serves the current topic |
+| Evidence | examples, screenshots, numbers, quotes | evidence threshold and unsupported-claim rule |
+| Emphasis | bold, quotes, lists, separators | WeMD-safe emphasis limits |
+| Visuals | screenshot timing, cover style, diagrams | visual slots and cover brief constraints |
+| CTA | comment prompt, next article, no CTA | smallest useful closing move |
+
+Then write a compact transfer note:
+
+```text
+Transfer note:
+- Use:
+- Adapt:
+- Do not copy:
+- WeMD conversion:
+```
+
+Use this note to draft. Do not keep re-reading source phrasing while writing.
 
 ## Drafting Workflow
 
@@ -182,17 +219,20 @@ Use this workflow:
 
 1. Identify the user's own article mission.
 2. Study the examples and build the style profile.
-3. Write a "borrow / avoid" list before drafting.
-4. Choose the article shape from `SKILL.md`.
-5. Draft from the user's topic, facts, and judgment.
-6. Apply benchmark rhythm only where it serves the topic.
-7. Clean for Doocs Markdown.
-8. Run originality and overfit checks.
-9. Save outputs to the article-title folder.
+3. Build the pattern matrix when there are 2 or more samples.
+4. Write a "borrow / avoid" list before drafting.
+5. Choose the article shape from `SKILL.md`.
+6. Draft from the user's topic, facts, and judgment.
+7. Apply benchmark rhythm only where it serves the topic.
+8. Clean for WeMD Markdown.
+9. Run originality and overfit checks.
+10. Save outputs to the article-title folder.
 
 The user's substance wins over the benchmark style.
 
-If the benchmark style conflicts with accuracy, clarity, or Doocs cleanliness, keep accuracy, clarity, and Doocs cleanliness.
+If the benchmark style conflicts with accuracy, clarity, or WeMD cleanliness, keep accuracy, clarity, and WeMD cleanliness.
+
+Do not let style learning remove operational content. For tutorials, protect steps, commands, screenshots, verification, and caveats before applying style rhythm.
 
 ## Borrow / Avoid List
 
@@ -219,9 +259,9 @@ Examples:
 - Avoid: same title syntax in every option.
 - Avoid: long lead quote before the article has started.
 
-## Doocs Combination
+## WeMD Combination
 
-When combining benchmark learning with Doocs:
+When combining benchmark learning with WeMD:
 
 - keep mobile reading lighter than the source if the source is dense
 - turn decorative subheadings into semantic headings
@@ -230,7 +270,7 @@ When combining benchmark learning with Doocs:
 - turn repeated bold lines into fewer, stronger emphasis points
 - move cover and image prompt detail to `visual-brief.md`
 
-Doocs is the final handoff format. The benchmark account is only a style reference.
+WeMD is the default handoff format. The benchmark account is only a style reference.
 
 ## Reuse Across Articles
 
@@ -249,7 +289,7 @@ Before delivery, check:
 - Does the article preserve the user's topic and facts?
 - Does each section have a new job?
 - Does the structure serve this article, not the sample?
-- Is the Markdown clean enough to paste into Doocs?
+- Is the Markdown clean enough for WeMD preview and copy flow?
 
 If the answer suggests overfitting, rebuild the affected section from:
 
@@ -282,6 +322,7 @@ Do not store copied source text inside `style-profile.md`.
 - Copying signature phrases while claiming to learn structure.
 - Making the article sound like a different person with no user viewpoint.
 - Recreating HTML-heavy layout inside Markdown.
-- Forgetting Doocs constraints after studying the source.
+- Forgetting WeMD constraints after studying the source.
 - Producing a style profile but not applying it.
 - Applying benchmark rhythm so strongly that tutorial steps or facts disappear.
+- Producing a pattern matrix but ignoring it during the draft.

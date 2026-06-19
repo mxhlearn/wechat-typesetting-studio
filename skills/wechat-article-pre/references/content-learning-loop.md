@@ -8,6 +8,8 @@ Treat feedback as reusable editing evidence.
 
 Do not claim permanent memory. Learn inside the current task by extracting stable preferences, failure patterns, and stricter next-pass rules.
 
+Portable learning lives in files the user can keep, usually `style-profile.md` or `review-notes.md`.
+
 ## Feedback Intake
 
 When the user says something like "too watery", "not rigorous", "too narrow", "cover is messy", or "you optimized away my tutorial", convert it into editing rules:
@@ -85,9 +87,19 @@ Within the task, maintain a compact preference ledger:
 - Scope: keep the skill broad for all WeChat articles, not one source folder.
 - Cover: use structured briefs, one focal subject, and default 2.35:1.
 - Output: create an article-title folder in the current session directory.
-- Doocs: final Markdown must stay clean and paste-ready.
+- WeMD: final Markdown must stay clean, preview-friendly, and copy-ready.
 
 Update the ledger when the user gives new concrete feedback.
+
+When the user provides an existing `style-profile.md`, merge it with the current brief:
+
+1. Keep explicit user instructions from the current task first.
+2. Keep durable preferences from the profile second.
+3. Add new feedback only if it is concrete.
+4. Drop stale rules that conflict with the current article shape.
+5. Do not preserve rules that caused the previous failure.
+
+Write the merged rules into a short private note before drafting.
 
 ## Style Profile Template
 
@@ -105,6 +117,8 @@ Style profile:
 - Words to avoid:
 - Formatting habits:
 - Non-negotiables:
+- Feedback history:
+- Last updated from:
 ```
 
 Keep it private unless the user asks for review notes.
@@ -112,6 +126,28 @@ Keep it private unless the user asks for review notes.
 If the user wants the style reused across later articles, write a compact `style-profile.md` sidecar. Do not store copied source text in it.
 
 Treat that file as the portable memory. On future tasks, read it when the user provides it, then update it only from new feedback or new examples.
+
+Keep `style-profile.md` actionable:
+
+- write constraints, not praise
+- keep each bullet short
+- include "protect" and "avoid" rules
+- record article shapes the profile applies to
+- avoid storing source paragraphs, private snippets, or full benchmark excerpts
+
+## Feedback To Rule Conversion
+
+Use this conversion table:
+
+| Feedback | Rule to add |
+| --- | --- |
+| 太水 | cut paragraphs without fact, judgment, step, example, consequence, or contrast |
+| 不严谨 | qualify claims, mark uncertainty, and remove unsupported promises |
+| 太窄 | check whether the rule overfits one article before adding it to the skill/profile |
+| 教程被优化掉 | protect required steps, links, screenshots, commands, and verification lines |
+| 封面杂乱 | enforce one focal subject, one metaphor, one style direction, `2.35:1` |
+| 太像 AI | replace generic transitions with concrete task, choice, or evidence |
+| 排版不适合公众号 | shorten paragraphs, reduce nesting, and check first-screen density |
 
 ## Self-Review Loop
 
@@ -128,6 +164,7 @@ For article outputs, add one extra pass:
 - Does this revision generalize to the user's future article types?
 - Did it preserve original facts, tutorial steps, and real constraints?
 - Did it reduce filler without making the article stiff?
+- Did it update the portable profile only when the new rule should survive future tasks?
 
 ## Failure Modes
 
@@ -138,3 +175,4 @@ For article outputs, add one extra pass:
 - Hiding uncertainty or inventing facts to sound more confident.
 - Putting internal learning notes inside publishable Markdown.
 - Copying a reference style so closely that the article loses the user's own point.
+- Treating `style-profile.md` as permanent truth instead of a user-editable working brief.

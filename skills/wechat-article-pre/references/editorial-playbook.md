@@ -114,6 +114,8 @@ Choose one structure before drafting.
 
 Rule: remove any paragraph that does not help the reader act, understand, verify, or avoid a mistake.
 
+Protection rule: do not remove required installation paths, download sections, links, commands, screenshots, environment labels, warnings, or verification steps just because they interrupt prose flow.
+
 ### Commentary / Review
 
 1. what changed
@@ -191,6 +193,7 @@ Rule: do not flatter the subject. Use details that reveal a decision, constraint
 - One section, one job.
 - One paragraph, one movement.
 - One sentence, one claim.
+- One claim, one basis.
 - Cut throat-clearing.
 - Cut explanations of what the article is about to explain.
 - Cut generic reassurance.
@@ -209,6 +212,8 @@ Before final delivery, scan every paragraph:
 - If yes, merge them.
 - Is the sentence true but obvious?
 - If yes, cut it or make it specific.
+- Does the sentence exist only to sound complete?
+- If yes, delete it.
 
 ## Tutorial Structure
 
@@ -218,9 +223,23 @@ Use concise verification lines:
 
 - `验证：输出版本号即表示安装完成。`
 - `验证：页面能正常打开，说明本地服务已经启动。`
-- `验证：Doocs 预览中只出现一个一级标题。`
+- `验证：WeMD 预览中只出现一个一级标题。`
 
 Do not narrate obvious steps.
+
+Before rewriting a tutorial, build a preservation checklist:
+
+```text
+Preserve:
+- required tools:
+- required links:
+- required commands:
+- required screenshots:
+- required verification:
+- required caveats:
+```
+
+After rewriting, check every preserved item appears in the final article or in an explicit sidecar note when the user requested sidecars.
 
 ## CTA
 
@@ -241,7 +260,27 @@ Check these before final delivery:
 - Opening: fast, clear, useful
 - Structure: one job per section
 - Voice: specific, edited, not generic
-- Doocs: one H1, shallow headings, short paragraphs
+- Editor-ready Markdown: one H1, shallow headings, short paragraphs
+
+## Review Mode
+
+Use review mode when the user asks to audit, check, diagnose, or improve an existing article without asking for a full rewrite.
+
+Return findings first. Group them by publishing impact:
+
+- Blocking: factual error, missing required step, broken link, unsafe command, fake screenshot, multiple H1 titles, prompt residue.
+- Major: weak title promise, slow opening, broken structure, unsupported claim, tutorial step without verification, WeMD-incompatible layout.
+- Minor: filler, repeated transition, awkward heading, over-bolding, paragraph wall, weak CTA.
+
+For each finding, include:
+
+- where it appears
+- why it hurts the article
+- the smallest useful fix
+
+Then add a short "rewrite priority" list. Do not produce a full rewrite unless the user asks.
+
+When the user asks for both review and rewrite, write the review notes to `review-notes.md` only if the notes help future editing. Keep `final-article.md` clean.
 
 ## Common Fixes
 

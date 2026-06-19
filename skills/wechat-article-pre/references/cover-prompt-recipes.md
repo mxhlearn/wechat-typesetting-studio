@@ -2,7 +2,7 @@
 
 Use this file only when the user asks for an actual raster cover or a generation-ready cover prompt.
 
-First read [visual-packaging.md](visual-packaging.md), stabilize `visual-brief.md`, then choose one recipe below. Keep the ratio `2.35:1` unless the user explicitly asks for another crop.
+First read [cover-brief.md](cover-brief.md), stabilize `visual-brief.md`, then choose one recipe below. Read [cover-qa.md](cover-qa.md) before delivery or retry. Keep the ratio `2.35:1` unless the user explicitly asks for another crop.
 
 ## Contents
 

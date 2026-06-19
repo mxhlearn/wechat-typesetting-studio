@@ -13,7 +13,7 @@ Use this file for paragraph length, rhythm, and tutorial polish.
 - Avoid tables unless the article depends on comparison data.
 - Keep dense context in the body, not before the first real point.
 
-## Doocs Rules
+## WeMD Rules
 
 - Use one `#` title only.
 - Use `##` for main sections.
@@ -23,8 +23,9 @@ Use this file for paragraph length, rhythm, and tutorial polish.
 - Keep image notes on standalone lines.
 - Keep inline links only when they help immediate reading.
 - Move the first screen toward light, not dense.
+- Keep Markdown compatible with GitHub-flavored Markdown unless the user confirms a WeMD-specific extension, CSS, or theme customization.
 
-When adapting a benchmark public account, preserve reading rhythm, not decoration. Convert custom cards, color blocks, HTML spacing, and heavy image-text layouts into clean Markdown sections, short paragraphs, and standalone image notes.
+When adapting a benchmark public account, preserve reading rhythm, not decoration. Convert custom cards, color blocks, HTML spacing, and heavy image-text layouts into clean Markdown sections, short paragraphs, and standalone image notes unless the user explicitly asks to design WeMD CSS.
 
 ## Tone Rules
 
@@ -65,6 +66,8 @@ For tutorials and setup guides:
 Keep action, reason, and verification close together.
 Do not narrate obvious steps.
 
+Do not compress a required step into a vague sentence. If the original draft contains a real command, link, setting, screenshot need, or verification clue, preserve it unless it is wrong or unsafe.
+
 ## QA
 
 Before delivery, check:
@@ -73,6 +76,6 @@ Before delivery, check:
 - the opening is fast
 - each section has one job
 - the voice is edited, not generic
-- the markdown still reads cleanly in Doocs
+- the markdown still reads cleanly in WeMD
 - unsupported claims are cut or qualified
-- any borrowed layout style has been converted into Doocs-safe Markdown
+- any borrowed layout style has been converted into WeMD-safe Markdown
