@@ -18,6 +18,9 @@ Before delivery, verify:
 - Is there exactly one style direction?
 - Does the prompt avoid long decorative adjective chains?
 - Is the file name stable, usually `cover-image.png`?
+- Does the visual still work without reading small labels?
+- Does it avoid implying a real screenshot when the image is generated?
+- If text will be added later, is there enough quiet space for it?
 
 ## Crop Safety
 
@@ -27,6 +30,7 @@ For `2.35:1` covers:
 - avoid tiny labels and UI details near both horizontal edges
 - leave negative space for optional title placement
 - make the cover still legible if WeChat crops slightly
+- keep the title-safe area visually calm even when text is added later
 
 ## Text QA
 
@@ -39,7 +43,9 @@ Pass only when:
 - there are no extra pseudo-characters
 - the text is not warped or hidden by the subject
 
-If text fails once, remove in-image text and keep the copy in `visual-brief.md`.
+If text fails once, remove in-image text. Keep the intended copy in the internal visual plan, or in `visual-brief.md` only when the user explicitly requested a separate visual plan.
+
+For no-text covers, pass only when the image still has a clear topic cue or enough space for post-added title text.
 
 ## Failure Modes
 
@@ -52,6 +58,8 @@ If text fails once, remove in-image text and keep the copy in `visual-brief.md`.
 - long Chinese text inside the image
 - prompt lists many metaphors instead of choosing one
 - cover looks attractive but does not match the article promise
+- cover needs explanation to make sense
+- generated cover uses tiny pseudo-text as decoration
 
 ## Retry Ladder
 
@@ -63,5 +71,7 @@ Retry once with one targeted change:
 - Fake UI: switch to concept cover or require a real screenshot separately.
 - Stock feel: specify editorial illustration and remove business tropes.
 - Bad crop: add crop-safe center and wider negative space.
+- Mixed style: choose one rendering language and remove style adjectives that conflict.
+- Weak hierarchy: enlarge the focal subject and reduce background detail.
 
 If the second result still fails, deliver the best brief and state the remaining visual risk outside the publishable article.

@@ -2,13 +2,15 @@
 
 Use this file only when the user asks for an actual raster cover or a generation-ready cover prompt.
 
-First read [cover-brief.md](cover-brief.md), stabilize `visual-brief.md`, then choose one recipe below. Read [cover-qa.md](cover-qa.md) before delivery or retry. Keep the ratio `2.35:1` unless the user explicitly asks for another crop.
+First read [cover-brief.md](cover-brief.md), stabilize a compact internal visual plan, then choose one recipe below. Read [cover-qa.md](cover-qa.md) before delivery or retry. Keep the ratio `2.35:1` unless the user explicitly asks for another crop.
 
 ## Contents
 
 - [Tutorial Cover](#tutorial-cover)
 - [Commentary Cover](#commentary-cover)
 - [Explainer Cover](#explainer-cover)
+- [Case Review Cover](#case-review-cover)
+- [List Post Cover](#list-post-cover)
 - [Text-Led Cover](#text-led-cover)
 - [Retry Rules](#retry-rules)
 
@@ -89,6 +91,55 @@ Constraints: no dense labels, no more than 3 visual groups, no tiny text
 Avoid: complicated flowcharts, decorative arrows, crowded icons
 ```
 
+## Case Review Cover
+
+Use when the article extracts a lesson from a real decision, constraint, or result.
+
+```text
+Use case: stylized-concept
+Asset type: WeChat public-account article cover
+Ratio: 2.35:1
+Article promise: <reader understands the lesson from this case>
+Primary subject: one decision point, forked path, or object that represents the tradeoff
+Scene/backdrop: restrained editorial scene, no fake UI
+Style/medium: editorial illustration
+Style direction: Editorial illustration
+Type: scene or metaphor
+Palette family: warm or elegant
+Rendering: hand-drawn or flat-vector
+Text level: none
+Mood level: balanced
+Font: clean
+Composition/framing: 2.35:1 wide cover, one focal tradeoff, calm negative space
+Text (verbatim): none
+Constraints: no melodrama, no fake brand, no cluttered timeline
+Avoid: stock office scene, dramatic failure imagery, many tiny objects
+```
+
+## List Post Cover
+
+Use when the article is a checklist or curated list.
+
+```text
+Use case: infographic-diagram
+Asset type: WeChat public-account article cover
+Ratio: 2.35:1
+Article promise: <reader can choose or check items quickly>
+Primary subject: compact visual checklist with 3 large groups
+Style/medium: minimal editorial diagram
+Style direction: Minimal diagram
+Type: minimal
+Palette family: cool or mono
+Rendering: flat-vector or digital
+Text level: none
+Mood level: subtle
+Font: clean
+Composition/framing: 2.35:1 wide cover, three large blocks, no tiny labels
+Text (verbatim): none
+Constraints: no dense checklist text, no more than 3 groups, no decorative icons
+Avoid: crowded knowledge poster, tiny bullets, rainbow palette
+```
+
 ## Text-Led Cover
 
 Use only when a short cover phrase is the main visual.
@@ -119,7 +170,9 @@ Retry once with one targeted change:
 
 - too cluttered: reduce to one subject and remove secondary objects
 - weak relevance: replace mood words with the article promise
-- unreadable text: remove in-image text and keep copy as sidecar text
+- unreadable text: remove in-image text and keep the intended copy as a post-edit note only when the user requested a separate visual plan
 - fake UI: switch to concept cover or require real screenshot separately
 - stock feel: specify editorial illustration and remove business stock tropes
 - bad crop: add crop-safe center and wider negative space
+- mixed style: choose one rendering language
+- weak hierarchy: enlarge the primary subject and remove background detail

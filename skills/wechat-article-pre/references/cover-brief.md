@@ -1,6 +1,6 @@
 # Cover Brief
 
-Use this file when the article needs a cover direction, `visual-brief.md`, or a generation-ready cover prompt.
+Use this file when the article needs a cover direction, an internal visual plan, or a generation-ready cover prompt.
 
 The cover must clarify the article promise. It should not decorate a weak article.
 
@@ -21,11 +21,11 @@ The cover must clarify the article promise. It should not decorate a weak articl
 
 Choose the lightest useful output:
 
-- Cover note only: when the user only needs a simple WeMD handoff.
-- `visual-brief.md`: when cover direction, prompt, or image slots matter.
+- Internal cover plan: default for cover direction, prompt, or image slots.
+- `visual-brief.md`: only when the user explicitly asks for a separate visual plan.
 - `cover-image.png`: only when the user asks for an actual raster cover.
 
-If generating a cover, stabilize `visual-brief.md` first. Then read [cover-prompt-recipes.md](cover-prompt-recipes.md).
+If generating a cover, stabilize a compact internal visual plan first. Then read [cover-prompt-recipes.md](cover-prompt-recipes.md).
 
 ## Canvas
 
@@ -50,6 +50,8 @@ Build the cover from the article promise:
 5. Choose composition and crop safety.
 6. Name the asset.
 7. Write a short prompt only when an image will be generated.
+
+If the article has no stable promise yet, return to the article before designing the cover.
 
 ## Cover Types
 
@@ -88,6 +90,8 @@ Recommended mappings:
 
 Avoid `vivid`, `dark`, `hero`, `title-subtitle`, and `bold` unless the article truly needs a strong poster.
 
+Do not combine more than one rendering language. Choose flat-vector, clean 3D, hand-drawn, or screen-print; do not ask for all of them.
+
 ## Layout Density
 
 Add one density choice:
@@ -100,9 +104,11 @@ Add one density choice:
 
 If the cover has more than 3 competing objects, simplify before prompting.
 
+For tool tutorials, prefer `flow` only when each step can be represented without labels. Otherwise use `balanced`.
+
 ## Brief Template
 
-Use this in `visual-brief.md`:
+Use this as an internal planning checklist. Write it to `visual-brief.md` only when the user explicitly asks for a separate visual plan:
 
 ```markdown
 ## Cover
@@ -124,6 +130,8 @@ Use this in `visual-brief.md`:
 - Font:
 - Text on cover:
 - Text strategy:
+- Screenshot/proof requirement:
+- Post-edit text plan:
 - Ratio: 2.35:1
 - Size:
 - Asset name:
@@ -187,6 +195,8 @@ Weak cover copy:
 - dense subtitle
 - broad emotional phrase
 
+If title text will be added after generation, keep a post-edit text plan internally unless the user explicitly asks for `visual-brief.md`: exact text, placement, contrast, and maximum length.
+
 ## Rules
 
 - Align the cover with the article promise.
@@ -196,3 +206,5 @@ Weak cover copy:
 - Avoid fake screenshots, fake UI states, fake logs, invented brands, logos, and watermarks.
 - Avoid random floating icons, generic business stock imagery, dense diagrams, and mixed visual styles.
 - For tutorials, use real screenshots for proof and AI images only for covers or conceptual visuals.
+- Do not use exact product logos unless the user provides permission or asks for brand-faithful assets.
+- Leave enough quiet space for WeChat cropping and optional post-added text.

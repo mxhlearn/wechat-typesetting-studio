@@ -28,6 +28,8 @@ It does not mean:
 - exaggerated emotional wording
 - copywriting that sounds like an ad
 
+If the user asks for stronger spread, strengthen the promise and first screen before adding emotional language.
+
 ## Title Families That Travel Well
 
 Prefer one of these title families.
@@ -78,6 +80,18 @@ Patterns:
 - `当大家都在谈 X，普通人最该关心的其实是什么？`
 
 Use sparingly for tutorial articles.
+
+### 5. Mistake Avoidance
+
+Best for tutorials, tool workflows, and operational checklists.
+
+Patterns:
+
+- `配置 X 前，先避开这 3 个坑`
+- `X 跑不起来，先检查这几处`
+- `别急着装 X，先确认这几个条件`
+
+Use only when the article actually explains the pitfalls.
 
 ## First-Screen Formula
 
@@ -139,6 +153,7 @@ Preferred order:
 - surface pitfalls before readers hit them
 - add one concise "save this" style checklist only when it truly helps
 - let the ending land softly instead of repeating the whole article
+- make the first useful detail arrive before the first long background paragraph
 
 ## Blank-Page Draft Rules
 
@@ -149,6 +164,7 @@ When the user gives no draft and says "write it directly":
 - state narrow assumptions briefly
 - do not ask broad planning questions unless the topic is genuinely under-specified
 - if the topic is operational, default to a utility-first tutorial rather than a reflective essay
+- if the topic is broad, narrow it to one reader outcome before drafting
 
 ## Anti-Fake Constraints
 
@@ -159,3 +175,5 @@ Reject these patterns unless the user explicitly wants them:
 - stacking too many benefits before showing the method
 - claiming "一篇搞定" when the article clearly does not cover the full path
 - long emotional endings after a practical tutorial
+- using "必看", "全网最全", or "颠覆" without evidence
+- manufacturing conflict when the article is just a practical guide

@@ -8,7 +8,7 @@ Treat feedback as reusable editing evidence.
 
 Do not claim permanent memory. Learn inside the current task by extracting stable preferences, failure patterns, and stricter next-pass rules.
 
-Portable learning lives in files the user can keep, usually `style-profile.md` or `review-notes.md`.
+Portable learning lives in files the user explicitly asks to keep, usually `style-profile.md`.
 
 ## Feedback Intake
 
@@ -21,6 +21,8 @@ When the user says something like "too watery", "not rigorous", "too narrow", "c
 - What should be added to the review pass?
 
 If feedback conflicts with an earlier rule, prefer the user's newer feedback unless it would create factual or publishing risk.
+
+If the feedback is emotional but not specific, infer one likely rule and verify it against the artifact before changing the skill or profile.
 
 ## Style Sources
 
@@ -62,11 +64,13 @@ Feedback learned:
 - Avoid:
 - Raise:
 - Next pass must check:
+- Applies to:
+- Do not overfit:
 ```
 
 Do not put this note in `final-article.md`.
 
-Put it in `review-notes.md` only when the user asks for review rationale or when the note would help future manual editing.
+Do not create `review-notes.md` unless the user explicitly asks for a standalone audit file.
 
 ## Article Adaptation
 
@@ -88,6 +92,8 @@ Within the task, maintain a compact preference ledger:
 - Cover: use structured briefs, one focal subject, and default 2.35:1.
 - Output: create an article-title folder in the current session directory.
 - WeMD: final Markdown must stay clean, preview-friendly, and copy-ready.
+- Evidence: protect source facts and mark freshness risks.
+- Reader: tune detail level to novice, experienced, decision maker, or follower.
 
 Update the ledger when the user gives new concrete feedback.
 
@@ -117,6 +123,8 @@ Style profile:
 - Words to avoid:
 - Formatting habits:
 - Non-negotiables:
+- Reader level:
+- Evidence threshold:
 - Feedback history:
 - Last updated from:
 ```
@@ -135,6 +143,30 @@ Keep `style-profile.md` actionable:
 - record article shapes the profile applies to
 - avoid storing source paragraphs, private snippets, or full benchmark excerpts
 
+Recommended `style-profile.md` sections:
+
+```markdown
+# Style Profile
+
+## Applies To
+
+## Voice
+
+## Structure
+
+## Evidence
+
+## Formatting
+
+## Protect
+
+## Avoid
+
+## Update Notes
+```
+
+Keep update notes brief: date/source type and what changed, not a changelog.
+
 ## Feedback To Rule Conversion
 
 Use this conversion table:
@@ -148,6 +180,14 @@ Use this conversion table:
 | 封面杂乱 | enforce one focal subject, one metaphor, one style direction, `2.35:1` |
 | 太像 AI | replace generic transitions with concrete task, choice, or evidence |
 | 排版不适合公众号 | shorten paragraphs, reduce nesting, and check first-screen density |
+| 标题没吸引力 | make the subject, promise, and boundary visible without exaggeration |
+| 开头没抓住人 | start with task, friction, contrast, or judgment within 2 paragraphs |
+| 太散 | lock one mission sentence and remove sections that do not serve it |
+| 风格不像我 | preserve the user's viewpoint, preferred terms, and judgment rhythm |
+| 太像别人 | rebuild from the user's facts and constraints; do not synonym-swap |
+| 信息不准 | add freshness checks and separate fact from interpretation |
+| 太基础 | reduce definitions and focus on caveats, differences, or decisions |
+| 看不懂 | add one definition, one example, or one verification line near the confusion |
 
 ## Self-Review Loop
 
@@ -166,6 +206,8 @@ For article outputs, add one extra pass:
 - Did it reduce filler without making the article stiff?
 - Did it update the portable profile only when the new rule should survive future tasks?
 
+If the same feedback appears twice, promote it from one-off note to reusable style/profile constraint.
+
 ## Failure Modes
 
 - Treating one feedback sample as the whole product scope.
@@ -176,3 +218,4 @@ For article outputs, add one extra pass:
 - Putting internal learning notes inside publishable Markdown.
 - Copying a reference style so closely that the article loses the user's own point.
 - Treating `style-profile.md` as permanent truth instead of a user-editable working brief.
+- Updating many references for a one-off preference that belongs only in the chat response.

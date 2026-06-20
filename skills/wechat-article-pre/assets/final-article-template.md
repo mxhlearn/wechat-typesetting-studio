@@ -1,21 +1,49 @@
-# {{Title}}
+# {{Final title}}
 
-> {{One-sentence promise or takeaway}}
+> {{One-sentence promise, judgment, or reader outcome.}}
 
-{{Opening paragraph. State the tension, task, or judgment directly.}}
+{{Opening paragraph. State the real problem, tension, task, or conclusion directly.}}
 
-## {{Section One}}
+{{Optional context paragraph. Add only when it changes how the reader understands the article.}}
 
-{{One clear job: context, problem, method, step, fact, or argument.}}
+## {{Section heading: result, decision, or concrete question}}
 
-## {{Section Two}}
+{{Short paragraph. One idea only.}}
 
-{{Advance the article. Do not repeat the previous section.}}
+- {{Parallel point when scanning helps}}
+- {{Parallel point when scanning helps}}
+- {{Parallel point when scanning helps}}
 
-## {{Section Three}}
+> [!TIP]
+> {{Use only for a short actionable tip, warning, or conclusion. Delete when not needed.}}
 
-{{Deliver the practical method, judgment, verification, or key implication.}}
+## {{Section heading: method, reason, or step group}}
 
-## {{Closing}}
+{{Explain the action or argument before details.}}
 
-{{Close with one takeaway, next step, or CTA.}}
+```bash
+{{command-or-code-when-needed}}
+```
+
+{{Verification, result, or interpretation.}}
+
+![{{Short alt text}}](section-01.png)
+
+## {{Section heading: comparison, caveat, or key implication}}
+
+| {{Item}} | {{Use when comparison is compact}} |
+| --- | --- |
+| {{A}} | {{Meaning or action}} |
+| {{B}} | {{Meaning or action}} |
+
+{{If the table grows wide or dense, rewrite it as bullets before delivery.}}
+
+## {{Closing heading}}
+
+{{Close with one useful takeaway, next step, or restrained CTA.}}
+
+## References
+
+{{Delete this section when no source links need to remain.}}
+
+- [{{Useful source name}}]({{url}})

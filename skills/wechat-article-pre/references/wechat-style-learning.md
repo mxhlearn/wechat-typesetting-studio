@@ -38,6 +38,8 @@ Use 2 to 5 samples when possible. One sample is enough for a light pass, but do 
 
 Do not require the user to provide a whole account archive.
 
+When using screenshots, learn layout rhythm only. Do not infer exact wording from unreadable text.
+
 ## Sample Collection
 
 When the user gives only an account name or says to find examples:
@@ -84,6 +86,13 @@ Do not copy:
 
 If the source account is a living creator or active brand, keep more distance. Borrow the method, not the voice identity.
 
+When learning from a benchmark account and the user's own writing at the same time, extract two profiles:
+
+- User voice: preferred terms, stance, recurring concerns, boundaries.
+- Benchmark discipline: pacing, packaging, layout, evidence habits.
+
+Apply user voice first and benchmark discipline second.
+
 ## Style Profile
 
 Before drafting, create a compact private profile:
@@ -102,20 +111,22 @@ Benchmark style profile:
 - Layout habits:
 - Image habits:
 - CTA style:
+- Evidence habits:
+- Risk distance:
 - Words to avoid copying:
 - Reusable constraints:
 ```
 
 Keep the profile out of `final-article.md`.
 
-Write `style-profile.md` by default when:
+Write `style-profile.md` only when:
 
 - the user explicitly asks to learn from sample accounts or benchmark articles
 - the user asks to reuse the style later
-- multiple examples were studied
-- the profile would help future manual revision
 
-Use `review-notes.md` instead only when the profile is a one-off review aid and the user did not ask for reusable style learning.
+For one-off style learning, apply the learned constraints to `final-article.md` without creating a separate profile file.
+
+When writing `style-profile.md`, include only the rules a future agent can apply without seeing the original samples.
 
 ## Language Extraction
 
@@ -200,6 +211,8 @@ Build this matrix when the user provides multiple examples or asks for style lea
 | Emphasis | bold, quotes, lists, separators | WeMD-safe emphasis limits |
 | Visuals | screenshot timing, cover style, diagrams | visual slots and cover brief constraints |
 | CTA | comment prompt, next article, no CTA | smallest useful closing move |
+| Reader fit | assumed knowledge and explanation depth | detail level for this article |
+| Freshness | dates, versions, current claims | verify, qualify, or remove unstable points |
 
 Then write a compact transfer note:
 
@@ -259,6 +272,8 @@ Examples:
 - Avoid: same title syntax in every option.
 - Avoid: long lead quote before the article has started.
 
+If the borrow list contains more than 5 items, choose the 3 most important. Too many style constraints usually make the article stiff.
+
 ## WeMD Combination
 
 When combining benchmark learning with WeMD:
@@ -268,7 +283,7 @@ When combining benchmark learning with WeMD:
 - turn long quote-led openings into one concise lead
 - turn image-heavy rhythm into explicit image slots
 - turn repeated bold lines into fewer, stronger emphasis points
-- move cover and image prompt detail to `visual-brief.md`
+- keep cover and image prompt detail internal unless the user explicitly asks for `visual-brief.md`
 
 WeMD is the default handoff format. The benchmark account is only a style reference.
 
@@ -280,6 +295,8 @@ When the user wants the learned style to carry into future articles, save the re
 
 The profile should contain patterns, constraints, and anti-patterns. It should not contain copied source paragraphs.
 
+When updating a profile, append only durable constraints. Do not add one-off article facts or temporary campaign needs.
+
 ## Similarity QA
 
 Before delivery, check:
@@ -290,6 +307,8 @@ Before delivery, check:
 - Does each section have a new job?
 - Does the structure serve this article, not the sample?
 - Is the Markdown clean enough for WeMD preview and copy flow?
+- Are repeated sentence openings from the source avoided?
+- Are the user's own terms and viewpoint still visible?
 
 If the answer suggests overfitting, rebuild the affected section from:
 
@@ -306,15 +325,17 @@ Default article folder:
 ```text
 文章标题/
   final-article.md
-  style-profile.md        # only when useful for future reuse
-  visual-brief.md         # only when visuals matter
-  title-options.md        # only when title choices matter
-  review-notes.md         # only when review rationale helps
+  cover-image.png         # only when generated or supplied
+  section-01.png          # only when generated or supplied
 ```
 
 `style-profile.md` should be compact. It is a reusable working brief, not a public article.
 
+If benchmark style suggests stronger section rhythm, put optional `##` or `###` subheading alternatives directly in `final-article.md`; do not create a separate title-options file.
+
 Do not store copied source text inside `style-profile.md`.
+
+Do not store raw URLs to private or login-only articles unless the user explicitly wants them preserved.
 
 ## Failure Modes
 
@@ -326,3 +347,4 @@ Do not store copied source text inside `style-profile.md`.
 - Producing a style profile but not applying it.
 - Applying benchmark rhythm so strongly that tutorial steps or facts disappear.
 - Producing a pattern matrix but ignoring it during the draft.
+- Learning public-account decoration while ignoring the user's topic promise.

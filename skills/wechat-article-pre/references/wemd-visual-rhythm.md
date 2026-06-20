@@ -35,6 +35,8 @@ Do not stack too many of these before the reader starts moving:
 
 If an image is useful near the top, place it after the opening rather than before the article has properly started.
 
+For practical tutorials, the first screen should not hide the task behind brand storytelling. State the end state early.
+
 ## Section Rhythm
 
 Each main section should feel like one screen-level idea.
@@ -87,6 +89,9 @@ Avoid headings that are:
 - too lyrical for a tutorial
 - too abstract to predict the section
 - near-duplicates of the title
+- only decorative emotional phrases
+
+For tutorials, good headings often start with an action or result. For commentary, good headings can state a judgment.
 
 ## WeMD Feature Discipline
 
@@ -100,7 +105,7 @@ Use advanced features only when they serve the article:
 - Math: only when the article genuinely needs formulas.
 - Theme/CSS assumptions: keep content readable without custom styling.
 
-If a feature may not survive the final WeChat copy flow, put the fallback in the article or a sidecar note.
+If a feature may not survive the final WeChat copy flow, simplify it in the article. Use a sidecar fallback only when the user explicitly asks for one.
 
 ## List Rhythm
 
@@ -120,6 +125,8 @@ If a list has more than 5 items, check whether:
 - some items should become prose
 - a subhead should come before it
 
+Avoid a list directly under every heading. Alternate prose, lists, screenshots, and verification lines when the article is long.
+
 ## Code And Screenshot Rhythm
 
 Code blocks and screenshots should feel anchored, not dropped in randomly.
@@ -132,10 +139,13 @@ Before a code block:
 After a code block:
 
 - tell the reader what successful output looks like when needed
+- explain only the output signal the reader needs; do not paste fake output
 
 Before a screenshot marker:
 
 - make sure the surrounding text already explains why the screenshot matters
+
+If a screenshot slot is essential, place it immediately after the step it proves.
 
 ## Emphasis Discipline
 
@@ -176,3 +186,7 @@ Before calling the article visually ready for WeMD, check:
 - are screenshot markers placed only where they help
 - can the Markdown still read well without custom theme assumptions
 - does the article still feel like content first, style second
+- are long code blocks framed by purpose and verification
+- are image notes close to the relevant action
+- are accessibility cues present for important images, diagrams, and screenshots
+- does the article remain understandable if optional images are missing

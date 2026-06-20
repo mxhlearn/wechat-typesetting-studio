@@ -18,8 +18,10 @@ Choose the lightest useful support:
 
 - No visual: when the article is already clear and short.
 - Image note: when the user needs a screenshot, diagram, or cover placeholder.
-- `visual-brief.md`: when visual direction, cover copy, prompt, or image slots matter.
+- `visual-brief.md`: only when the user explicitly asks for a separate visual plan.
 - Generated cover: only when the user asks for a raster cover.
+
+If visuals would slow delivery without improving reader action, skip them and keep the article clean.
 
 ## Inline Images
 
@@ -49,9 +51,11 @@ For tutorials:
 - News/update digest: factual cover, no alarmist imagery.
 - Interview/profile: portrait, workspace, object detail, or no visual.
 
+For any shape, do not mix proof visuals and mood visuals in the same slot.
+
 ## Output
 
-When visuals matter, `visual-brief.md` should include only useful parts:
+When the user explicitly asks for `visual-brief.md`, include only useful parts:
 
 - cover concept
 - cover copy options
@@ -60,8 +64,27 @@ When visuals matter, `visual-brief.md` should include only useful parts:
 - screenshot slots
 - diagram slots
 - asset names
+- source requirements for real screenshots when needed
 
-Do not put long prompts in `final-article.md`.
+Recommended structure:
+
+```markdown
+# Visual Brief
+
+## Cover
+
+## Screenshot Slots
+
+## Diagram Slots
+
+## Prompt Blocks
+
+## Asset Names
+```
+
+Omit empty sections.
+
+Do not put long prompts in `final-article.md`. If no `visual-brief.md` is requested, keep prompts internal and deliver only generated image assets.
 
 Keep article image notes short:
 
@@ -77,5 +100,8 @@ Before delivery, check:
 - Does every visual slot serve a reader task?
 - Is proof separated from concept art?
 - Are screenshot notes short and placed near the relevant step?
-- Is cover work moved to `visual-brief.md`?
+- Is cover planning kept out of `final-article.md` unless requested?
 - Is `final-article.md` still clean WeMD Markdown?
+- Are all generated-image prompts outside `final-article.md`?
+- Are empty visual sections omitted from `visual-brief.md`?
+- Do visual notes explain the purpose of the image, not just its appearance?

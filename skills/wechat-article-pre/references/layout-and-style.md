@@ -12,6 +12,8 @@ Use this file for paragraph length, rhythm, and tutorial polish.
 - Use unordered lists for grouped points.
 - Avoid tables unless the article depends on comparison data.
 - Keep dense context in the body, not before the first real point.
+- Avoid decorative horizontal rules unless the user explicitly wants that style.
+- Prefer section headings that can stand alone in a table of contents.
 
 ## WeMD Rules
 
@@ -24,6 +26,9 @@ Use this file for paragraph length, rhythm, and tutorial polish.
 - Keep inline links only when they help immediate reading.
 - Move the first screen toward light, not dense.
 - Keep Markdown compatible with GitHub-flavored Markdown unless the user confirms a WeMD-specific extension, CSS, or theme customization.
+- Do not use nested lists deeper than 2 levels unless the source structure requires it.
+- Avoid putting long URLs inline; use descriptive link text or a `## References` section.
+- Keep blockquotes short and meaningful; do not use them as decoration.
 
 When adapting a benchmark public account, preserve reading rhythm, not decoration. Convert custom cards, color blocks, HTML spacing, and heavy image-text layouts into clean Markdown sections, short paragraphs, and standalone image notes unless the user explicitly asks to design WeMD CSS.
 
@@ -79,3 +84,6 @@ Before delivery, check:
 - the markdown still reads cleanly in WeMD
 - unsupported claims are cut or qualified
 - any borrowed layout style has been converted into WeMD-safe Markdown
+- no table, quote, or bold pattern is used only for decoration
+- headings remain readable when scanned alone
+- paragraph breaks do not split a single command explanation from its verification

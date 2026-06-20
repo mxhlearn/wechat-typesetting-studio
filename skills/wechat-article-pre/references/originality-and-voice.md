@@ -40,6 +40,9 @@ Avoid these pattern types unless the user explicitly wants them:
 - conclusions that only restate the title
 - invented certainty around facts the source did not provide
 - decorative adjectives that do not change the reader's understanding
+- slogan-like claims before evidence
+- "not only... but also..." escalation without a real contrast
+- paragraphs that repeat the heading in softer words
 
 Prefer:
 
@@ -50,6 +53,28 @@ Prefer:
 - a verifiable detail
 - a specific editorial judgment
 - a narrower claim that can be defended
+
+## Voice Register
+
+Choose one register and keep it stable:
+
+- Operational: direct, step-based, low emotion. Best for tutorials.
+- Analytical: claim, reason, implication. Best for explainers and commentary.
+- Reflective: case, choice, lesson. Best for reviews and personal notes.
+- Curatorial: selection rule, grouped items, concise notes. Best for lists.
+
+Do not mix registers randomly. A tutorial can have a reflective closing, but the body should stay operational.
+
+## Reader Fit
+
+Before final wording, choose the reader's likely state:
+
+- first-time user: define terms once, keep steps explicit
+- experienced user: skip basics, focus on differences and caveats
+- decision maker: foreground tradeoffs and consequences
+- returning follower: preserve the user's recurring vocabulary and viewpoint
+
+Do not explain basics to experienced readers unless the article is explicitly introductory.
 
 ## Natural Chinese Rhythm
 
@@ -90,6 +115,8 @@ When using reference articles:
 - extract promise strategy
 - extract pacing
 - extract packaging moves
+
+When the user has their own draft and reference samples, the user's draft wins. Use samples to improve rhythm and packaging, not to replace the user's viewpoint.
 
 Do not reuse:
 
@@ -155,6 +182,7 @@ Run this pass before final delivery:
 4. Replace inflated claims with conditional claims.
 5. Keep one strong judgment per section when the article is commentary or review.
 6. Keep one verification point per critical step when the article is a tutorial.
+7. Remove claims that sound impressive but cannot be checked from the source.
 
 Common replacements:
 
@@ -178,6 +206,12 @@ Cut or rewrite sentences that begin like:
 - "值得一提的是"
 - "总的来说"
 - "这也说明了一个问题"
+- "不可否认的是"
+- "毋庸置疑"
+- "从某种意义上说"
+- "在实际使用过程中"
+- "可以说"
+- "无论是个人还是团队"
 
 Keep them only when the rest of the sentence contains a concrete, non-generic claim.
 
@@ -190,3 +224,4 @@ Before delivery, ask:
 - is any paragraph memorable for the right reason, or only well-formed
 - if I remove the title, does the opening still prove the article knows what it is doing
 - would this sentence survive a strict human editor
+- did the article keep the user's own judgment instead of becoming neutral polish
