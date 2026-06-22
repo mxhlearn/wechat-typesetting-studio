@@ -77,3 +77,7 @@ skills/
     scripts/
 scripts/
 ```
+
+## 开源协议
+
+本仓库基于 [MIT License](LICENSE) 开源。
