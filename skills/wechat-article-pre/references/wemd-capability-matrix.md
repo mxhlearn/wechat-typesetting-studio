@@ -35,10 +35,19 @@ Use this tiering before writing the final article:
 | --- | --- | --- |
 | Safe core | headings, paragraphs, lists, blockquotes, links, standard images, fenced code | use directly |
 | Safe when simple | tables, code highlighting, short GitHub-style callouts, basic emphasis | use only when they improve clarity |
-| Confirm first | Mermaid, math, custom CSS, theme-specific blocks, sliding image groups, image hosting | ask or verify when final copy behavior matters |
+| Supported, use deliberately | Mermaid, math formulas, sliding image groups | use when the component is better than prose, with a text fallback for the key idea |
+| Confirm workflow first | custom CSS, theme-specific blocks, image hosting, local image behavior | ask or verify when the user's final copy flow matters |
 | Avoid in article body | raw HTML cards, complex nested lists, wide tables, local-only image paths | simplify for publishable Markdown |
 
 WeMD can support advanced features, but the public-account article should remain readable if a theme, CSS block, image host, or diagram renderer changes.
+
+## Verification Rule
+
+If final delivery uses a feature from "Supported, use deliberately", keep the key idea readable without the renderer. WeMD supports Mermaid, math formulas, and sliding image groups, but the article should not depend on them as the only explanation.
+
+If final delivery depends on "Confirm workflow first", either verify the behavior in the user's WeMD flow or keep the workflow note outside `final-article.md`.
+
+Do not rely on unverified editor behavior for the only explanation of a key idea. A Mermaid diagram, formula, image-host link, custom CSS block, or sliding image group must have a readable fallback or a user-confirmed workflow.
 
 ## Feature Decision
 
@@ -69,10 +78,10 @@ For publishable article Markdown, default to:
 
 ## Ask Or Verify Before Using
 
-Ask the user or verify in WeMD before relying on:
+WeMD supports Mermaid, math formulas, and sliding image groups. Do not ask just to use them; ask only when the final WeChat copy behavior, theme behavior, image hosting, or local asset workflow matters.
 
-- Mermaid rendering in the final copy destination
-- math formula rendering in the final copy destination
+Ask the user or verify before relying on:
+
 - custom CSS or theme-specific blocks
 - image-host upload behavior
 - sliding image group syntax or behavior
@@ -87,6 +96,7 @@ Ask the user or verify in WeMD before relying on:
 
 - Mermaid: provide a short text summary below the diagram.
 - Math: add a plain-language explanation near the formula.
+- Sliding image group: provide clear image order or separate standard image slots when the group is not essential.
 - Wide table: convert to bullets or split into smaller comparison blocks.
 - Image hosting uncertainty: use stable asset names and keep only short publishable image notes in `final-article.md` when the image is part of the article.
 - Theme uncertainty: keep Markdown semantic and readable without color or card styling.

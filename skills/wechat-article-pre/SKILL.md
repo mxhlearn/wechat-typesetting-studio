@@ -1,48 +1,28 @@
 ---
 name: wechat-article-pre
-description: Use when drafting, rewriting, polishing, packaging, or reviewing Chinese WeChat official account content into WeMD-ready Markdown. Covers rough drafts, notes, outlines, tutorials, commentary, reviews, list posts, explainers, case reviews, news/update digests, interviews/profiles, title/opening work, benchmark public-account style learning, feedback learning, cover briefs, cover prompt shaping, cover QA, visual notes, and final publication-readiness audits. Prioritize direct WeMD-adapted layout, precise Chinese writing, article-shape routing, low-AI voice, concise structure, factual restraint, GitHub-flavored Markdown compatibility, and light visual packaging.
+description: Use when drafting, rewriting, polishing, packaging, or reviewing Chinese WeChat official account content into WeMD-ready Markdown. Covers rough drafts, notes, outlines, tutorials, commentary, reviews, list posts, explainers, case reviews, news/update digests, interviews/profiles, title/opening work, benchmark public-account style learning, feedback learning, adaptive editorial composition, cover briefs, cover prompt shaping, cover QA, visual notes, and final publication-readiness audits. Prioritize direct WeMD-adapted layout, precise Chinese writing, article-shape routing, human-like component placement, low-AI voice, concise structure, factual restraint, GitHub-flavored Markdown compatibility, and light visual packaging.
 ---
 
 # WeChat Article Pre
 
-Use this skill to turn raw WeChat public-account content into finished WeMD-ready Markdown. Default output is one article file plus image assets.
+Use this skill to turn raw WeChat public-account material into finished WeMD-ready Markdown. Default delivery is one article-title folder containing `final-article.md` plus useful image assets.
 
-## Defaults
+## Operating Defaults
 
-Default to:
-
-- Chinese-first output
-- substance before packaging
-- direct WeMD-adapted Markdown layout
-- low-AI voice
-- light visuals only when useful
+- Write Chinese-first, publishable prose.
+- Preserve protected facts, links, commands, quotes, images, and constraints.
+- Choose the article shape, layout rhythm, and components from the article's job instead of forcing a fixed template.
+- Use screenshots, tables, callouts, code blocks, quotes, diagrams, and references when they clarify, prove, compare, warn, verify, or improve reading rhythm.
+- Keep the voice concise, specific, and edited; avoid formulaic openings, repeated reassurance, and FAQ-style serious tutorials unless the source or user asks for that shape.
+- Apply WeMD-ready Markdown before delivery.
+- Default output is one article folder with `final-article.md` plus image assets. Do not create sidecars unless explicitly requested.
+- Tutorial/setup/tool walkthrough drafts include concrete screenshot/image slots by default.
+- Final drafts include a concise cover suggestion unless the user explicitly opts out or a cover asset/visual brief replaces it.
+- Keep personal local paths, account details, keys, and machine-specific information out of publishable output unless the user explicitly says the detail is meant to be public.
 
 If the brief is clear, draft or rewrite directly. Ask only for missing facts that would change the article.
 
 Do not pad. Prefer a shorter finished article over a longer smooth draft.
-
-## Scope
-
-Use this skill for upstream WeChat content work:
-
-- tutorial
-- commentary
-- review
-- explainer
-- list post
-- case review
-- news/update digest
-- interview/profile
-- draft rewrite
-- title/opening repair
-- benchmark account style learning
-- cover brief
-- feedback-driven revision
-- audit and polish
-
-If the shape is unclear, infer it from the source and state the assumption before writing.
-
-When feedback exists, convert it into concrete editing constraints before revising.
 
 ## Shape Routing
 
@@ -60,26 +40,25 @@ Choose the narrowest shape that fits the request:
 
 If the request mixes shapes, choose one primary shape and one support shape. Example: a tutorial may use commentary in the opening, but the steps and verification still control the structure.
 
+If the shape is unclear, infer it from the source and mention the assumption outside the article only when it affects scope. When feedback exists, convert it into concrete editing constraints before revising.
+
 ## Workflow
 
-1. Lock the mission in one sentence.
-2. Choose the article shape.
-3. Identify protected facts, links, commands, quotes, images, and constraints.
-4. If benchmark articles, sample accounts, or reusable style files exist, extract a style profile and borrow/avoid constraints before planning the article.
-5. Choose the final title, opening move, section order, and any useful in-article subheading alternatives.
-6. Draft or rewrite from the strongest point.
-7. Cut generic lines and repeated ideas.
-8. Check factual restraint and unsupported claims.
-9. Apply WeMD layout rules before delivery.
-10. Add in-article subheading alternatives and image notes only when useful.
-11. Run final audit internally; do not write audit notes as an output file unless explicitly requested.
+1. Lock the mission, reader, article shape, and protected facts.
+2. Load only the references needed for the task.
+3. If benchmark articles, sample accounts, or reusable style files exist, extract transferable constraints before planning.
+4. Choose the final title, opening move, section order, component plan, image slots, and cover handling.
+5. Draft or rewrite from the strongest point, then cut generic lines and repeated ideas.
+6. Apply the WeMD handoff contract and quality gates.
+7. When `final-article.md` is created or edited, run `scripts/check_article_output.py` on the article folder before delivery.
+8. Keep review/audit notes internal unless the user explicitly asks for a standalone report.
 
 ## Reference Routes
 
 Read only what the task needs:
 
-- Writing and structure: [references/editorial-playbook.md](references/editorial-playbook.md), [references/originality-and-voice.md](references/originality-and-voice.md), [references/layout-and-style.md](references/layout-and-style.md).
-- WeMD formatting and output: [references/wemd-handoff-contract.md](references/wemd-handoff-contract.md), [references/wemd-capability-matrix.md](references/wemd-capability-matrix.md), [references/wemd-visual-rhythm.md](references/wemd-visual-rhythm.md).
+- Writing and structure: [references/editorial-playbook.md](references/editorial-playbook.md), [references/editorial-composition.md](references/editorial-composition.md), [references/originality-and-voice.md](references/originality-and-voice.md), [references/layout-and-style.md](references/layout-and-style.md).
+- WeMD formatting and output: [references/wemd-handoff-contract.md](references/wemd-handoff-contract.md), [references/wemd-capability-matrix.md](references/wemd-capability-matrix.md), [references/wemd-visual-rhythm.md](references/wemd-visual-rhythm.md), and [references/wemd-component-patterns.md](references/wemd-component-patterns.md) only when concrete syntax examples are needed.
 - Feedback or benchmark style learning: [references/content-learning-loop.md](references/content-learning-loop.md), [references/wechat-style-learning.md](references/wechat-style-learning.md).
 - Visuals and covers: [references/visual-packaging.md](references/visual-packaging.md), [references/cover-brief.md](references/cover-brief.md), [references/cover-qa.md](references/cover-qa.md), and [references/cover-prompt-recipes.md](references/cover-prompt-recipes.md) only for actual generation or prompt output.
 - Spread/title packaging: [references/wechat-viral-patterns.md](references/wechat-viral-patterns.md).
@@ -87,71 +66,36 @@ Read only what the task needs:
 
 ## Deliverable Contract
 
-Default to a folder in the current session working directory, named after the article title.
+Follow [references/wemd-handoff-contract.md](references/wemd-handoff-contract.md) for file placement, naming, WeMD-safe Markdown, image notes, sidecars, and final shape.
 
-Place publishable outputs inside that folder:
-
-- `final-article.md`
-- `cover-image.png` when a raster cover is generated
-- other image files when generated or supplied for the article
-
-`final-article.md` must:
-
-- read like a finished article
-- contain one `#` title
-- use `##` for main sections
-- use `###` only when needed
-- avoid raw HTML unless the user explicitly asks for WeMD/CSS customization
-- avoid TODOs, prompt residue, and editor notes
-- keep image notes short and standalone
-- use `## References` only when links must stay
-
-Default to no sidecar files. The normal deliverable is one article file plus image assets.
-
-The review pass is an internal quality gate. Do not materialize it as `review-notes.md` during normal drafting, rewriting, polishing, or packaging.
-
-Create sidecars only when explicitly requested:
-
-- `style-profile.md` for reusable style memory
-- `visual-brief.md` for a separate visual plan
-- `review-notes.md` for a standalone audit report
-
-Do not create `title-options.md` by default. Use one final H1 title in `final-article.md`. When heading choices are useful, place concise alternatives beside the relevant `##` or `###` heading inside `final-article.md`.
-
-When planning visuals internally, keep the plan out of `final-article.md` unless the user asks for `visual-brief.md`.
-
-If the user asks for an actual raster cover, stabilize a compact visual plan first, then use the image-generation workflow and inspect the result before delivery.
+Normal output is `final-article.md` plus generated or supplied image assets. If the user asks for an actual raster cover, stabilize a compact visual plan, use the cover references, and inspect the result before delivery.
 
 ## Article Rules
 
-For tutorials, setup guides, workflow guides, or tool walkthroughs:
+Open from a concrete task, friction, scene, fact, or judgment. Do not default to "three things", "several points", "first/second/finally", or other meta-outline openings unless the article is explicitly a list or checklist.
 
-- preserve required steps, links, commands, screenshots, and verification
-- prefer direct headings
-- keep action, reason, and verification together
-- label shell environments clearly
-- use fenced code blocks with language tags
-- mark real screenshot slots with standalone image notes
-- do not fabricate screenshots, terminal output, or UI states
-- keep heading depth at `###` or above
+Compose the article like a finished public-account post. Choose the layout style and component placement from the article's job; do not force every article into the same skeleton.
+
+For tutorials, setup guides, workflow guides, or tool walkthroughs, preserve required steps, links, commands, screenshots, verification, and environment labels. Use direct headings, pair each action with its reason or verification, reserve screenshot slots near the step they support, and avoid FAQ-style self-questioning unless the user requests it or the source is truly Q&A.
+
+Use one final `#` title. Do not generate main-title option files by default. Do not list heading alternatives outside the publishable flow unless the user explicitly asks for editable alternatives.
 
 ## Guardrails
 
-Stay in article preparation. Keep facts accurate, avoid fake screenshots or invented UI states, do not copy benchmark-account wording, and do not promise platform results.
+Stay in article preparation. Keep facts accurate, avoid fake screenshots or invented UI states, do not copy benchmark-account wording, do not promise platform results, and do not remove useful TIPs, tables, images, references, or callouts merely to make the article plain.
 
 ## Final Audit
 
-Before delivery, verify:
+Before delivery, verify the essentials, then use [references/quality-gates.md](references/quality-gates.md) when the task is substantial or a file is written:
 
 - title matches the promise
-- opening earns the next scroll
-- each section has one job
-- repeated ideas are cut
-- voice sounds specific and edited
 - shape matches content
-- tutorial steps are executable
-- user feedback has been applied without overfitting
-- Markdown is already formatted for WeMD preview/copy flow
+- voice sounds specific, concise, and edited
+- layout style and components match the article job
+- tutorial image slots and cover suggestion are present when useful
+- Markdown is formatted for WeMD preview/copy flow
+- no personal local path, account detail, secret, or machine-specific note leaked into publishable content
+- `scripts/check_article_output.py` passes without warnings unless the user explicitly accepts the warning
 - internal commentary is gone
 
 When the user asks only for a review, return findings first, grouped by severity or publishing impact. Do not rewrite the full article unless asked.

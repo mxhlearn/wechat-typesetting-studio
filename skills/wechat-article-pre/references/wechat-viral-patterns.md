@@ -9,6 +9,16 @@ This file reflects observable patterns from current Chinese tech-media and publi
 - 少数派 front-page guide-style headlines and utility framing
 - 极客公园 headline-plus-summary packaging for topic interest and first-screen clarity
 
+## Contents
+
+- [Core Rule](#core-rule)
+- [Title Families That Travel Well](#title-families-that-travel-well)
+- [First-Screen Formula](#first-screen-formula)
+- [Structure Shapes That Share Well](#structure-shapes-that-share-well)
+- [Packaging Moves That Feel Strong Without Feeling Fake](#packaging-moves-that-feel-strong-without-feeling-fake)
+- [Blank-Page Draft Rules](#blank-page-draft-rules)
+- [Anti-Fake Constraints](#anti-fake-constraints)
+
 ## Core Rule
 
 Do not interpret "viral" as noisy.
@@ -53,7 +63,7 @@ Best when the user pain point is stronger than the tool name.
 Patterns:
 
 - `总在 X 这一步卡住？这样处理更稳`
-- `为什么很多人装不好 X？问题通常出在这 3 处`
+- `为什么很多人装不好 X？先查这个配置`
 - `想把 X 一次配通，你真正要注意的是这些细节`
 
 Use when friction, failure, or confusion is the real hook.
@@ -64,11 +74,12 @@ Best when the article needs to promise boundaries clearly.
 
 Patterns:
 
-- `这篇只解决 3 件事：A、B、C`
 - `不讲大而全，只带你完成 X`
 - `如果你只想先把 X 跑通，可以直接照这篇做`
 
 Use when the topic is broad but the article should feel manageable.
+
+Do not use `3 件事`, `几点`, or `几个方面` as the default title hook. Use a number only when the body is genuinely a numbered checklist and every item is substantial.
 
 ### 4. Question With Stakes
 
@@ -89,17 +100,19 @@ Patterns:
 
 - `配置 X 前，先避开这 3 个坑`
 - `X 跑不起来，先检查这几处`
-- `别急着装 X，先确认这几个条件`
+- `装 X 之前，先确认这几个条件`
 
-Use only when the article actually explains the pitfalls.
+Use only when the article actually explains the pitfalls. If the pitfalls are not countable before drafting, avoid a numbered title.
 
 ## First-Screen Formula
 
-The first screen should usually do 3 things:
+The first screen should show the article's value without announcing a table of contents.
 
-1. tell the reader what this article helps them finish
-2. reduce uncertainty
-3. make the path feel shorter
+It should usually:
+
+- tell the reader what this article helps them finish
+- reduce uncertainty with one concrete friction, condition, or result
+- make the path feel shorter through the first usable detail
 
 Good tutorial opening formula:
 
@@ -107,6 +120,8 @@ Good tutorial opening formula:
 - one short summary or hook line
 - one paragraph that states the task
 - one paragraph that states the main friction or likely pitfall
+
+Avoid opening formulas like `这篇主要讲三件事`, `下面分几个方面`, or `首先我们来了解`. Start with the task, problem, scene, or judgment itself.
 
 Avoid opening with:
 
@@ -175,5 +190,6 @@ Reject these patterns unless the user explicitly wants them:
 - stacking too many benefits before showing the method
 - claiming "一篇搞定" when the article clearly does not cover the full path
 - long emotional endings after a practical tutorial
+- repeated reassurance phrases such as `不要着急`, `别急`, `不用担心`, or `放心` when a direct check is clearer
 - using "必看", "全网最全", or "颠覆" without evidence
 - manufacturing conflict when the article is just a practical guide

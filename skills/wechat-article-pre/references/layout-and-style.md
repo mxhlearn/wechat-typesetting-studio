@@ -14,6 +14,7 @@ Use this file for paragraph length, rhythm, and tutorial polish.
 - Keep dense context in the body, not before the first real point.
 - Avoid decorative horizontal rules unless the user explicitly wants that style.
 - Prefer section headings that can stand alone in a table of contents.
+- Do not open with a meta outline such as `三件事`, `几点`, `几个方面`, or `首先/其次/最后` unless the article is explicitly a numbered list.
 
 ## WeMD Rules
 
@@ -46,6 +47,7 @@ When adapting a benchmark public account, preserve reading rhythm, not decoratio
 Remove these patterns:
 
 - broad opening claims
+- numbered outline openings without a real list structure
 - stacked benefit lists before the method
 - polite filler before obvious steps
 - summary sentences that repeat the heading

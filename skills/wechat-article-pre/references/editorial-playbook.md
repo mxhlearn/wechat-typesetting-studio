@@ -2,6 +2,24 @@
 
 Use this file when the article needs a title, opening, structure, CTA, or review pass.
 
+## Contents
+
+- [Mission Lock](#mission-lock)
+- [Angle Selection](#angle-selection)
+- [Title System](#title-system)
+- [Subheading Options](#subheading-options)
+- [Opening System](#opening-system)
+- [Structure Patterns](#structure-patterns)
+- [Factual Discipline](#factual-discipline)
+- [Source Triage](#source-triage)
+- [Hard Editing Rules](#hard-editing-rules)
+- [Density Check](#density-check)
+- [Tutorial Structure](#tutorial-structure)
+- [CTA](#cta)
+- [Review Rubric](#review-rubric)
+- [Review Mode](#review-mode)
+- [Common Fixes](#common-fixes)
+
 ## Mission Lock
 
 Reduce the article to one sentence:
@@ -42,21 +60,20 @@ A good title does three things:
 
 **Problem to result**
 
-- `X 总是装不好，问题通常出在这几处`
-- `写公众号总像 AI 稿，可以先改这 3 个地方`
+- `X 总是装不好，先查最容易被忽略的配置`
+- `写公众号总像 AI 稿，先拆掉这些模板句`
 - `用 X 做 Y 时，真正卡人的不是工具本身`
 
 **Scope lock**
 
-- `这篇只解决 3 件事：A、B、C`
 - `不讲大而全，先把 X 跑通`
-- `如果你只想完成 X，可以直接照这篇做`
+- `只想完成 X，可以直接照这条路径做`
 
 **Insight correction**
 
 - `很多人误解了 X：它真正改变的是 Y`
 - `X 不是万能答案，但它适合解决这类问题`
-- `别急着追新工具，先把这个判断标准弄清楚`
+- `追新工具前，先把这个判断标准弄清楚`
 
 ### Title Rules
 
@@ -87,30 +104,33 @@ Default behavior:
 
 - keep one final `#` title
 - do not create `title-options.md`
-- if alternatives help, place them inside `final-article.md` near the relevant section
+- if alternatives help during drafting, choose the best one before final delivery
 - use alternatives for `##` or `###`, not for the H1 title
 - keep alternatives short and ready to choose manually
 
-Format:
+Drafting-only format:
 
 ```markdown
-## 安装前先确认这几件事
-
-<!-- Subheading alternatives:
+Section job: environment check
+Candidates:
+- 安装前先确认环境
 - 先把环境准备好
 - 开始之前，先检查这几项
--->
+Final heading:
+- 安装前先确认环境
 ```
 
-Use comment blocks only when the user wants editable alternatives in the final file. Otherwise choose the best heading and omit alternatives.
+Keep this note private unless the user explicitly asks for editable alternatives. A normal `final-article.md` should contain only the final chosen heading.
 
 ## Opening System
 
-The opening should answer three questions fast:
+The opening should make the article useful fast without announcing an outline.
 
-1. What does this article help me finish?
-2. Why should I trust the path?
-3. Why keep reading now?
+By the end of the first paragraph, the reader should know:
+
+- the concrete task, problem, scene, or judgment
+- why the article exists
+- what changes if they keep reading
 
 ### Opening Moves
 
@@ -133,12 +153,16 @@ Start with a real moment, then connect it to the point.
 ### Opening Rules
 
 - Avoid generic era or trend framing.
+- Avoid numbered-outline openings such as `这篇先说三件事`, `下面分几点展开`, `主要有三个部分`.
 - Avoid `本文将从以下几个方面展开`.
+- Avoid `首先 / 其次 / 最后` in the opening unless the article is explicitly a numbered checklist.
 - Avoid warm-up paragraphs that delay the point.
 - Avoid repeated rhetorical questions.
+- Avoid self-questioning as a default tutorial device.
 - Do not start with a broad claim unless the next sentence proves it.
 - Do not start with a quote unless the quote changes the reader's next action.
 - If the source draft has a useful first-hand detail, use that detail before general background.
+- The first sentence should land on a real noun or action, not on the article's own structure.
 
 ### Opening QA
 
@@ -147,6 +171,7 @@ After writing the opening, ask:
 - Can the reader tell what they will get within 5 seconds?
 - Is there one concrete friction, decision, or promise?
 - Did the opening avoid explaining the whole outline?
+- Does the first sentence avoid `三件事`, `几点`, `几个方面`, and similar meta-outline wording?
 - Would the second paragraph still be useful if the title were removed?
 
 ## Structure Patterns
@@ -163,6 +188,19 @@ If the user provides only a topic and no draft, choose the most conservative use
 
 State assumptions briefly outside the publishable article only when they affect scope.
 
+After choosing the structure, choose a layout style from [editorial-composition.md](editorial-composition.md). Treat tables, images, callouts, code blocks, quotes, diagrams, and references as editorial tools, not fixed template blocks.
+
+Before drafting, decide the component plan in one private sentence:
+
+`This article needs [components] because [reader job they serve].`
+
+If that sentence cannot be written, do not use the component yet. If a supplied draft already contains a TIP, table, image, quote, code block, diagram, or References section, classify it first:
+
+- Content: keep and improve.
+- Proof: keep near the relevant claim or step.
+- Navigation: keep if it helps scan or repeat the workflow.
+- Residue: cut only after it has no article job.
+
 ### Tutorial / Setup Guide
 
 1. what this helps the reader finish
@@ -175,6 +213,44 @@ State assumptions briefly outside the publishable article only when they affect 
 Rule: remove any paragraph that does not help the reader act, understand, verify, or avoid a mistake.
 
 Protection rule: do not remove required installation paths, download sections, links, commands, screenshots, environment labels, warnings, or verification steps just because they interrupt prose flow.
+
+For serious tutorials, prefer declarative sections over FAQ-style self-questioning. Use `## 补充说明`, `## 版本选择`, `## 权限与环境检查`, or `## 排查建议` instead of `## 常见问题` unless the user explicitly asks for FAQ or the source material is truly question-and-answer.
+
+Question discipline for serious tutorials:
+
+- Use questions only when the reader is truly choosing between options.
+- Avoid section headings that ask "怎么做", "为什么", "怎么办", "哪一版", "是不是", or "要不要" when an action heading is clearer.
+- Prefer flat, declarative answers. State the recommended choice first, then give the condition.
+- Replace self-questioning transitions with direct notes.
+- If the article needs a troubleshooting block, write declarative symptoms and checks instead of a long FAQ.
+
+Example:
+
+```markdown
+## 权限与环境检查
+
+如果命令无法启动，先确认终端权限和安装路径。
+```
+
+Prefer this over:
+
+```markdown
+## 为什么我这里打不开？
+```
+
+Version-choice example:
+
+```markdown
+## 先安装桌面版，再按需安装 CLI 版
+
+只写文章和预览排版，先装桌面版。需要在终端里批处理、脚本化或接入工作流，再安装 CLI 版。
+```
+
+Prefer this over:
+
+```markdown
+## 首先要安装哪一版？
+```
 
 ### Commentary / Review
 
@@ -279,6 +355,9 @@ Do not cut a "must keep" item to make the prose smoother.
 - Cut throat-clearing.
 - Cut explanations of what the article is about to explain.
 - Cut generic reassurance.
+- Cut repeated reassurance phrases such as `不要着急`, `别急`, `不用担心`, and replace them with the actual check or risk.
+- Cut unnecessary self-questions. Turn them into declarative headings or compact notes.
+- Cut question-answer scaffolding in serious tutorials unless FAQ is part of the requested article shape.
 - Cut repeated transitions.
 - Keep claims proportional to evidence.
 - Prefer concrete nouns and verbs.

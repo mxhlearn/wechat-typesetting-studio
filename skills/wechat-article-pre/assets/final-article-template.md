@@ -1,49 +1,44 @@
-# {{Final title}}
+# Final Article Drafting Notes
 
-> {{One-sentence promise, judgment, or reader outcome.}}
+Use this asset only as a drafting reminder. Do not copy it into `final-article.md`.
 
-{{Opening paragraph. State the real problem, tension, task, or conclusion directly.}}
+Required final shape:
 
-{{Optional context paragraph. Add only when it changes how the reader understands the article.}}
+- one `#` title
+- concise opening from task, friction, scene, fact, or judgment
+- `##` main sections
+- `###` only when needed
+- short paragraphs
+- components only where they help the reader act, compare, verify, or understand
+- no template placeholders
+- no hidden comments
+- no editor notes
 
-## {{Section heading: result, decision, or concrete question}}
+Useful component patterns:
 
-{{Short paragraph. One idea only.}}
-
-- {{Parallel point when scanning helps}}
-- {{Parallel point when scanning helps}}
-- {{Parallel point when scanning helps}}
-
+```markdown
 > [!TIP]
-> {{Use only for a short actionable tip, warning, or conclusion. Delete when not needed.}}
-
-## {{Section heading: method, reason, or step group}}
-
-{{Explain the action or argument before details.}}
-
-```bash
-{{command-or-code-when-needed}}
+> Use only for an actionable tip that changes what the reader does.
 ```
 
-{{Verification, result, or interpretation.}}
+```markdown
+> [!WARNING]
+> Use only for a real risk, caveat, or mistake prevention.
+```
 
-![{{Short alt text}}](section-01.png)
+```markdown
+[Image Note: place a real screenshot here after verifying the step]
+```
 
-## {{Section heading: comparison, caveat, or key implication}}
+```markdown
+![Short alt text](section-01.png)
+```
 
-| {{Item}} | {{Use when comparison is compact}} |
+```markdown
+| Item | Meaning or action |
 | --- | --- |
-| {{A}} | {{Meaning or action}} |
-| {{B}} | {{Meaning or action}} |
+| A | Meaning or action |
+| B | Meaning or action |
+```
 
-{{If the table grows wide or dense, rewrite it as bullets before delivery.}}
-
-## {{Closing heading}}
-
-{{Close with one useful takeaway, next step, or restrained CTA.}}
-
-## References
-
-{{Delete this section when no source links need to remain.}}
-
-- [{{Useful source name}}]({{url}})
+Before delivery, remove anything that is not publishable article content.

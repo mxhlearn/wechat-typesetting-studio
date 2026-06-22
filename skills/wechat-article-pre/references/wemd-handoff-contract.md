@@ -4,9 +4,27 @@ Use this file when the final article must be directly formatted for WeMD and the
 
 WeMD references: `https://wemd.app/docs/` and `https://github.com/tenngoxars/WeMD`. Treat WeMD as a Markdown-first WeChat formatting tool. Format the article before handoff; do not leave layout decisions as notes unless the asset is genuinely missing.
 
+## Contents
+
+- [Output Folder](#output-folder)
+- [File Naming](#file-naming)
+- [Final Shape](#final-shape)
+- [WeMD Layout Rules](#wemd-layout-rules)
+- [Component Patterns](#component-patterns)
+- [WeMD Import Rules](#wemd-import-rules)
+- [Image Notes](#image-notes)
+- [Sidecar Rules](#sidecar-rules)
+- [Final Check](#final-check)
+
 ## Output Folder
 
-Default to creating one article folder in the current session working directory.
+Default to creating one article folder in the most relevant article workspace.
+
+Destination priority:
+
+1. user-provided output path
+2. current project/workspace when it is clearly an article workspace, such as `officialaccounts`
+3. current session working directory
 
 Folder name:
 
@@ -41,7 +59,7 @@ Use stable file names:
 - `cover-image.png`: generated cover image
 - `section-01.png`, `section-02.png`: generated or prepared article images when useful
 
-Do not create process logs, changelogs, quick references, or README files inside the skill output folder.
+Do not create process logs, changelogs, quick references, README files, or audit reports inside the skill output folder unless the user explicitly asks for them.
 
 Default to no sidecars. Put publishable article content in `final-article.md` and images as separate assets.
 
@@ -54,8 +72,11 @@ Default to no sidecars. Put publishable article content in `final-article.md` an
 - 3 to 5 `##` sections for most articles
 - `###` only when a section needs another layer
 - a short closing section or CTA
+- `## 封面建议` near the end when no `cover-image.png` or separate `visual-brief.md` is requested
 - `## References` only when links must stay
 - no file path that exposes the user's personal machine unless the user explicitly wants a local tutorial path shown
+
+The final article should look composed for its article job, not copied from a universal skeleton. Use images, tables, callouts, code blocks, lists, quotes, diagrams, and references as editorial choices.
 
 If links must remain, prefer:
 
@@ -66,6 +87,7 @@ If links must remain, prefer:
 Avoid:
 
 - multiple H1 titles
+- template placeholders or raw component snippet libraries
 - raw HTML for layout, color, or spacing unless the user explicitly asks for WeMD/CSS customization
 - deeply nested headings
 - table-heavy layouts unless comparison is essential
@@ -95,86 +117,17 @@ For tutorials, order each section as: goal, action, verification, note. Do not s
 
 For commentary, keep the first screen tight: title, one clear opening claim, and the first `##` within a short scroll.
 
-## WeMD Component Examples
+For component placement, use this order of thought:
 
-Use these patterns directly when they fit. Delete unused components before delivery.
+- claim -> evidence image, table, quote, or source link
+- step -> command, screenshot, verification, or warning
+- comparison -> criteria, table, then interpretation
+- concept -> diagram, example, then plain explanation
+- resource -> grouped list, short note, and reference link
 
-Short emphasis:
+## Component Patterns
 
-```markdown
-> 这一步的重点不是“安装成功”，而是确认它能在你的实际环境里跑起来。
-```
-
-GitHub-style callout:
-
-```markdown
-> [!TIP]
-> 如果只是临时测试，先不要改全局配置；确认结果稳定后再固化到脚本里。
-```
-
-Warning callout:
-
-```markdown
-> [!WARNING]
-> 不要把示例里的本地路径直接复制到生产环境，先替换成你自己的项目目录。
-```
-
-Command block:
-
-````markdown
-```powershell
-wemd --version
-```
-````
-
-Command explanation:
-
-```markdown
-这条命令只做版本确认。看到版本号后，再继续下一步。
-```
-
-Image asset:
-
-```markdown
-![WeMD 预览效果](section-01.png)
-```
-
-Missing screenshot note:
-
-```markdown
-[Image Note: place a real WeMD preview screenshot here after verifying the layout]
-```
-
-Compact comparison:
-
-```markdown
-| 场景 | 推荐写法 |
-| --- | --- |
-| 操作步骤 | 编号列表 |
-| 并列观点 | 无序列表 |
-| 参数对比 | 简表 |
-```
-
-Fallback for a wide table:
-
-```markdown
-- **操作步骤**：用编号列表，读者能按顺序执行。
-- **并列观点**：用无序列表，读者能快速扫完。
-- **参数对比**：只保留关键差异，超过 3 列就拆成小段。
-```
-
-Mermaid with plain-language fallback:
-
-````markdown
-```mermaid
-flowchart LR
-  A[输入草稿] --> B[整理结构]
-  B --> C[WeMD 排版]
-  C --> D[预览复制]
-```
-
-如果图表没有渲染，按这个顺序理解即可：先整理草稿，再套用 WeMD 排版，最后预览并复制到公众号编辑器。
-````
+For concrete examples of callouts, command blocks, image notes, tables, and Mermaid fallbacks, read [wemd-component-patterns.md](wemd-component-patterns.md).
 
 ## WeMD Import Rules
 
@@ -213,6 +166,7 @@ Use short bracket notes only:
 For tutorials:
 
 - use real screenshots for UI, settings, terminal output, and verification
+- add screenshot notes by default for UI-heavy install/setup/configuration/tutorial drafts
 - use AI images only for covers, concept diagrams, or section breaks
 - never replace a required screenshot with a fake image
 
@@ -220,53 +174,51 @@ If image hosting, upload, or local asset handling matters, ask the user how they
 
 When the image is required for proof, use `Image Note`. When it is optional packaging, use `Cover Note` or keep it as an image asset.
 
+Default tutorial screenshot note pattern:
+
+```markdown
+[Image Note: place a real screenshot of the settings page after completing this step]
+```
+
+Default cover suggestion pattern:
+
+```markdown
+## 封面建议
+
+- **比例**：2.35:1
+- **画面**：一个干净的流程感封面，主体围绕本文的关键工具和完成状态，不使用伪造截图。
+- **文字**：建议后期添加 2-6 个字短标题。
+```
+
 ## Sidecar Rules
 
-Use sidecars only when the user explicitly asks for them:
+Default to no sidecars. Create these only when explicitly requested:
 
 - `visual-brief.md`: separate cover/image plan
 - `review-notes.md`: standalone editorial audit report
 - `style-profile.md`: reusable benchmark style constraints, without copied source text
 
-Do not duplicate full article content across sidecars.
+When a sidecar is created, keep it short, give it one H1, and do not duplicate the article body.
 
-Default sidecar rule:
-
-- no sidecar by default
-- do not create `review-notes.md` for normal rewrite or polish tasks
-- do not create `visual-brief.md` just because images are needed
-- create `style-profile.md` only when the user asks for reusable style memory
-
-When a sidecar is created, keep it short enough to be read before manual publishing.
-
-Sidecar headers:
-
-- `visual-brief.md`: `# Visual Brief`
-- `review-notes.md`: `# Review Notes`
-- `style-profile.md`: `# Style Profile`
-
-Use one H1 per sidecar file.
-
-Heading alternatives:
-
-- do not create a separate title-options file by default
-- keep exactly one H1 in `final-article.md`
-- place optional `##` or `###` alternatives beside the relevant section only when useful
-- keep alternatives in a short HTML comment block so WeMD preview remains clean
+Do not create title-option files by default. Keep exactly one H1 in `final-article.md`, and keep editable alternatives outside the normal publishable flow unless the user explicitly asks for them.
 
 ## Final Check
 
-Before delivery, verify:
+Before delivery, verify only the handoff-specific items here, then use [quality-gates.md](quality-gates.md) for broader editorial checks:
 
 - one H1 only
 - headings no deeper than H3
 - short paragraphs
+- no `{{...}}`, raw template snippets, TODOs, prompt residue, or internal planning labels
+- layout style fits the article job
+- components are placed where they help the reader act, compare, verify, or understand
 - tagged code fences
 - short image notes
+- tutorial image notes are present when UI, terminal, setup, or verification proof matters
+- a concise `## 封面建议` section is present when no cover asset or visual brief is requested
 - no raw HTML unless an explicit WeMD/CSS customization request was verified
-- no publishing notes
-- no internal commentary
 - Markdown is ready for WeMD preview and copy flow
 - sidecar-only material has not leaked into `final-article.md`
 - no local absolute path leaks unless intentionally part of a tutorial
 - output folder contains only the final article, requested sidecars, and image assets
+- `scripts/check_article_output.py` passes on the output folder without warnings unless the user explicitly accepted the warning

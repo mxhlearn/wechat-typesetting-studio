@@ -2,6 +2,19 @@
 
 Use this file when the user gives feedback on article quality, style, structure, cover quality, or previous outputs.
 
+## Contents
+
+- [Rule](#rule)
+- [Feedback Intake](#feedback-intake)
+- [Style Sources](#style-sources)
+- [Learning Note](#learning-note)
+- [Article Adaptation](#article-adaptation)
+- [Preference Ledger](#preference-ledger)
+- [Style Profile Template](#style-profile-template)
+- [Feedback To Rule Conversion](#feedback-to-rule-conversion)
+- [Self-Review Loop](#self-review-loop)
+- [Failure Modes](#failure-modes)
+
 ## Rule
 
 Treat feedback as reusable editing evidence.
@@ -94,6 +107,8 @@ Within the task, maintain a compact preference ledger:
 - WeMD: final Markdown must stay clean, preview-friendly, and copy-ready.
 - Evidence: protect source facts and mark freshness risks.
 - Reader: tune detail level to novice, experienced, decision maker, or follower.
+- Voice hygiene: replace repeated reassurance phrases with concrete checks, risks, or actions.
+- Tutorial tone: use declarative notes instead of FAQ-style self-questioning unless FAQ is requested.
 
 Update the ledger when the user gives new concrete feedback.
 
@@ -179,6 +194,8 @@ Use this conversion table:
 | 教程被优化掉 | protect required steps, links, screenshots, commands, and verification lines |
 | 封面杂乱 | enforce one focal subject, one metaphor, one style direction, `2.35:1` |
 | 太像 AI | replace generic transitions with concrete task, choice, or evidence |
+| 安抚句重复 | replace `不要着急`, `别急`, `不用担心`, and similar phrases with the actual check, risk, or next action |
+| 自问自答太多 | convert FAQ-style questions into declarative sections or notes unless the user asked for FAQ |
 | 排版不适合公众号 | shorten paragraphs, reduce nesting, and check first-screen density |
 | 标题没吸引力 | make the subject, promise, and boundary visible without exaggeration |
 | 开头没抓住人 | start with task, friction, contrast, or judgment within 2 paragraphs |

@@ -24,14 +24,31 @@ Choose the lightest useful output:
 - Internal cover plan: default for cover direction, prompt, or image slots.
 - `visual-brief.md`: only when the user explicitly asks for a separate visual plan.
 - `cover-image.png`: only when the user asks for an actual raster cover.
+- `## 封面建议` in `final-article.md`: default lightweight handoff when no raster cover or separate visual brief is requested.
 
 If generating a cover, stabilize a compact internal visual plan first. Then read [cover-prompt-recipes.md](cover-prompt-recipes.md).
+
+When not generating a cover, include a concise cover suggestion in `final-article.md`:
+
+- ratio
+- one visual subject or metaphor
+- style direction
+- text strategy
+- one avoid rule
+
+Do not include long prompts, detailed mood boards, or generation parameters in the article body.
 
 ## Canvas
 
 Default ratio: `2.35:1`.
 
 Recommended sizes:
+
+- `1880 x 800`
+- `1645 x 700`
+- `1410 x 600`
+
+Use one of these sizes when generating or preparing a raster cover unless the user gives another size. After generation, run the output-folder check so `cover-image.png` dimensions are validated.
 
 - `2256x960`
 - `1504x640`
@@ -203,6 +220,8 @@ If title text will be added after generation, keep a post-edit text plan interna
 - Use one focal subject, one metaphor, one mood.
 - Default to `2.35:1`.
 - Use `cover-image.png` as the default generated asset name.
+- Prefer `1880 x 800`, `1645 x 700`, or `1410 x 600` for raster covers.
+- If no cover image is generated, include a short `## 封面建议` section in `final-article.md` unless the user explicitly says not to.
 - Avoid fake screenshots, fake UI states, fake logs, invented brands, logos, and watermarks.
 - Avoid random floating icons, generic business stock imagery, dense diagrams, and mixed visual styles.
 - For tutorials, use real screenshots for proof and AI images only for covers or conceptual visuals.

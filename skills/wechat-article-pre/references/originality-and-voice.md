@@ -4,6 +4,22 @@ Use this file when the user wants the article to feel less like AI copy and more
 
 Also use it whenever reference articles, benchmark samples, or source drafts are involved.
 
+## Contents
+
+- [Core Rule](#core-rule)
+- [Anti-AI Tone Rules](#anti-ai-tone-rules)
+- [Voice Register](#voice-register)
+- [Serious Tutorial Voice](#serious-tutorial-voice)
+- [Reader Fit](#reader-fit)
+- [Natural Chinese Rhythm](#natural-chinese-rhythm)
+- [Originality Rules](#originality-rules)
+- [Signs A Paragraph Still Sounds AI-Written](#signs-a-paragraph-still-sounds-ai-written)
+- [Signs A Paragraph Feels Too Close To A Reference](#signs-a-paragraph-feels-too-close-to-a-reference)
+- [Practical Rewrite Moves](#practical-rewrite-moves)
+- [Precision Pass](#precision-pass)
+- [Sentence-Level Cut List](#sentence-level-cut-list)
+- [Final Voice Check](#final-voice-check)
+
 ## Core Rule
 
 Do not aim for "smooth". Aim for "specific, natural, and worth reading".
@@ -23,6 +39,8 @@ If it adds none, cut it.
 
 Use a stricter rule for public-account drafts: if a sentence only increases politeness, atmosphere, or completeness, cut it unless it changes reader action or judgment.
 
+Do not compensate for weak structure with warmth. A precise sentence is better than a friendly sentence that says nothing.
+
 ## Anti-AI Tone Rules
 
 Avoid these pattern types unless the user explicitly wants them:
@@ -31,7 +49,11 @@ Avoid these pattern types unless the user explicitly wants them:
 - generic trend-opening line
 - "many people ask this" opening
 - "this article will explain several aspects" opening
+- "this article first says three things" opening
+- numbered outline opening when the article is not a real list
+- FAQ-style self-questioning in serious tutorials
 - "let us take a look together" transition
+- repeated reassurance or slowing-down phrases such as "do not rush" when a direct action is clearer
 - generic empathy-close line
 - empty summary transition
 - stacked benefit claims before showing the actual method
@@ -64,6 +86,44 @@ Choose one register and keep it stable:
 - Curatorial: selection rule, grouped items, concise notes. Best for lists.
 
 Do not mix registers randomly. A tutorial can have a reflective closing, but the body should stay operational.
+
+## Serious Tutorial Voice
+
+Use this register for installation guides, setup walkthroughs, tool configuration, command-line usage, and troubleshooting posts.
+
+Default style:
+
+- Direct action sentences.
+- Short reason only when it changes the choice.
+- Verification after critical steps.
+- Warnings as concrete risks, not emotional reassurance.
+- Few rhetorical questions.
+- No conversational padding before commands or screenshots.
+
+Avoid:
+
+- "不要着急", "别急", "先别急", "不用担心", "放心".
+- "这个问题其实很简单" when the article has not shown the fix.
+- Question-led section chains such as "为什么要装", "怎么安装", "装完怎么办", "首先要安装哪一版", "是不是需要", or "要不要安装" unless the article is intentionally FAQ.
+- Repeated "接下来我们..." transitions.
+
+Prefer:
+
+- "先确认安装路径。"
+- "这一步只做版本验证。"
+- "如果没有输出版本号，优先检查终端权限。"
+- "桌面版和 CLI 版可以分开装；只写文章时，先装桌面版更省事。"
+- "先安装桌面版；需要命令行工作流时再安装 CLI 版。"
+
+Tutorial heading rewrite patterns:
+
+| Avoid | Prefer |
+| --- | --- |
+| 首先要安装哪一版？ | 先安装桌面版，再按需安装 CLI 版 |
+| 怎么安装桌面版？ | 安装桌面版 |
+| 为什么要装 CLI？ | CLI 适合终端和批处理场景 |
+| 是不是必须配置环境变量？ | 按安装方式确认环境变量 |
+| 要不要重装？ | 先检查版本和路径，再决定是否重装 |
 
 ## Reader Fit
 
@@ -141,6 +201,8 @@ Rewrite when you see:
 - transitions are smooth but content is thin
 - the paragraph explains obvious things the reader already knows
 - the wording sounds safe in a way no real writer would naturally choose
+- the paragraph asks a question only to answer it in the next sentence
+- the paragraph reassures the reader instead of naming the next check
 
 ## Signs A Paragraph Feels Too Close To A Reference
 
@@ -164,6 +226,7 @@ Use these moves to de-template the draft:
 - replace abstract summary with one concrete sentence
 - merge two polite transitions into one direct line
 - cut the sentence that explains what the next paragraph will say
+- turn unnecessary questions into declarative headings or direct notes
 - turn broad encouragement into operational clarity
 - replace "this is important" with the actual reason it matters
 - replace "many people" with the actual reader group
@@ -171,6 +234,9 @@ Use these moves to de-template the draft:
 - replace "worth noting" with the note itself
 - replace "in summary" with the final action or judgment
 - replace "obviously / inevitably / completely" with the actual condition or evidence
+- replace "do not rush / don't worry" with the concrete check, risk, or next action
+- replace "what should we do next?" with the next action
+- replace "why is this important?" with the actual consequence
 
 ## Precision Pass
 
@@ -183,6 +249,8 @@ Run this pass before final delivery:
 5. Keep one strong judgment per section when the article is commentary or review.
 6. Keep one verification point per critical step when the article is a tutorial.
 7. Remove claims that sound impressive but cannot be checked from the source.
+8. Remove repeated reassurance phrases. In tutorials, state the check or risk directly.
+9. Remove FAQ-style self-questioning from serious tutorials unless the user explicitly asks for FAQ.
 
 Common replacements:
 
@@ -192,7 +260,8 @@ Common replacements:
 | 降低门槛 | 第一次配置也能按步骤跑通 |
 | 值得关注 | 会影响安装路径 / 写作节奏 / 发布前检查 |
 | 赋能创作 | 帮你把草稿改成可发布文章 |
-| 完整解决方案 | 这篇只解决安装、配置、验证三件事 |
+| 完整解决方案 | 先把安装、配置、验证这条路径跑通 |
+| 不要着急 / 别急 | 先完成检查 / 先确认权限 / 先验证结果 |
 
 ## Sentence-Level Cut List
 
@@ -203,6 +272,19 @@ Cut or rewrite sentences that begin like:
 - "对于很多人来说"
 - "我们不妨先来看看"
 - "本文将带你了解"
+- "这篇文章主要讲三件事"
+- "下面从几个方面展开"
+- "首先，我们先来了解一下"
+- "其次，我们再来看"
+- "最后，我们总结一下"
+- "不要着急"
+- "别着急"
+- "先别急"
+- "不用着急"
+- "不用担心"
+- "放心"
+- "接下来我们来看一下"
+- "接下来我们详细了解"
 - "值得一提的是"
 - "总的来说"
 - "这也说明了一个问题"

@@ -119,10 +119,7 @@ Benchmark style profile:
 
 Keep the profile out of `final-article.md`.
 
-Write `style-profile.md` only when:
-
-- the user explicitly asks to learn from sample accounts or benchmark articles
-- the user asks to reuse the style later
+Write `style-profile.md` only when the user explicitly asks to save reusable style memory for later articles.
 
 For one-off style learning, apply the learned constraints to `final-article.md` without creating a separate profile file.
 
@@ -331,7 +328,7 @@ Default article folder:
 
 `style-profile.md` should be compact. It is a reusable working brief, not a public article.
 
-If benchmark style suggests stronger section rhythm, put optional `##` or `###` subheading alternatives directly in `final-article.md`; do not create a separate title-options file.
+If benchmark style suggests stronger section rhythm, choose the best heading directly. Do not put heading alternatives in `final-article.md` and do not create a separate title-options file unless the user explicitly asks for editable alternatives.
 
 Do not store copied source text inside `style-profile.md`.
 

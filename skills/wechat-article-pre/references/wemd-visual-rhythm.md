@@ -4,6 +4,21 @@ Use this file when the article is targeting WeMD and should feel like a finished
 
 The goal is not decorative styling. The goal is clean, breathable, publication-ready Markdown that survives WeMD themes and WeChat copy flow.
 
+## Contents
+
+- [Visual Priorities](#visual-priorities)
+- [Opening Screen Rules](#opening-screen-rules)
+- [Section Rhythm](#section-rhythm)
+- [Paragraph Texture](#paragraph-texture)
+- [Heading Style](#heading-style)
+- [WeMD Feature Discipline](#wemd-feature-discipline)
+- [Component Rhythm By Article Type](#component-rhythm-by-article-type)
+- [List Rhythm](#list-rhythm)
+- [Code And Screenshot Rhythm](#code-and-screenshot-rhythm)
+- [Emphasis Discipline](#emphasis-discipline)
+- [Closing Rhythm](#closing-rhythm)
+- [WeMD Visual QA](#wemd-visual-qa)
+
 ## Visual Priorities
 
 Optimize for these outcomes in order:
@@ -14,12 +29,14 @@ Optimize for these outcomes in order:
 4. screenshots, code blocks, diagrams, and notes do not interrupt the reading rhythm
 5. the article still feels like content first, not a theme demo
 
+Choose the article's visual rhythm from its job. A tutorial, comparison, case story, checklist, and commentary piece should not share the same component pattern.
+
 ## Opening Screen Rules
 
 The first visible screen in WeMD preview should usually contain:
 
 - one clear title
-- one short summary line or lead quote
+- optional short lead line or supplied quote, only when it adds information or judgment
 - one opening paragraph or one opening paragraph plus one short transition line
 
 Avoid making the top of the article crowded.
@@ -107,6 +124,17 @@ Use advanced features only when they serve the article:
 
 If a feature may not survive the final WeChat copy flow, simplify it in the article. Use a sidecar fallback only when the user explicitly asks for one.
 
+Do not avoid useful components just to keep the article plain. A good table, screenshot, warning, or reference can be the strongest part of the article when placed at the right moment.
+
+## Component Rhythm By Article Type
+
+- Tutorial: steps, code blocks, screenshots, verification lines, and warnings near the actions they support.
+- Comparison or review: criteria first, compact table second, interpretation after the table.
+- Explainer: one diagram, example, or callout when it clarifies the concept faster than prose.
+- Case story: images, quotes, or tables only when they prove the case or reveal the decision.
+- Checklist or resource guide: grouped lists, short notes, and references are part of the content.
+- Commentary: mostly prose; use emphasis blocks sparingly for the strongest claim or caveat.
+
 ## List Rhythm
 
 Lists should help scan speed, not inflate the article.
@@ -181,6 +209,8 @@ Before calling the article visually ready for WeMD, check:
 
 - would the first screen feel clean on mobile
 - do section breaks appear before fatigue
+- does the visual rhythm match the article type
+- are tables, images, callouts, and references editorially placed rather than mechanically included
 - are there any heavy text walls that need splitting
 - do code blocks have enough framing
 - are screenshot markers placed only where they help
